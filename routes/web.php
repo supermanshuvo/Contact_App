@@ -14,5 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return 'Shuvo';
+});
+Route::get('/login',function(){
+    return "This is login page";
 });
