@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="row d-flex justify-content-center">
         <form>
             <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
             <div class="form-group">
@@ -15,7 +15,7 @@
             <div class="form-group">
                 <button class="btn btn-primary" type="submit">Sign in</button>
             </div>
-                <a href="{{ url('/register') }}"><button class="btn btn-info">Create Account</button></a>
+                <p>Don't have an account?<a href="{{ url('/register') }}">Sign Up</a></p>
         </form>
     </div>
 </div>

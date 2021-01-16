@@ -14,7 +14,7 @@
             </div>
             <div class="form-group">
                 <button class="btn btn-info">Create Account</button>
-                <a href="{{ url('/login') }}"><button class="btn btn-primary" type="submit">Sign in</button></a>
+                <p>Already have an account<a href="{{ url('/login') }}"> Login Now</a></p>
             </div>
         </form>
     </div>
