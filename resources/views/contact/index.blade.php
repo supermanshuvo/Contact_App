@@ -2,7 +2,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <form class="form-signin">
+        <form>
             <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
             <div class="form-group">
                 <label for="inputEmail" class="sr-only">Email address</label>
