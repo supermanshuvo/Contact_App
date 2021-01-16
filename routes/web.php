@@ -17,5 +17,8 @@ Route::get('/', function () {
     return view('contact.index');
 });
 Route::get('/login',function(){
-    return "This is login page";
+    return view('contact.login')->name('login');
+});
+Route::get('/register', function(){
+    return view('contact.register')->name('register');
 });

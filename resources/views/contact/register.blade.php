@@ -13,8 +13,8 @@
                 <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
             </div>
             <div class="form-group">
-                <button class="btn btn-primary" type="submit">Sign in</button>
                 <button class="btn btn-info">Create Account</button>
+                <button class="btn btn-primary" type="submit"><a href="{{ route('login') }}">Sign in</a></button>
             </div>
         </form>
     </div>
