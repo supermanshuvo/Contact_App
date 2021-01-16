@@ -13,7 +13,7 @@
                 <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
             </div>
             <div class="form-group">
-                <button class="btn btn-primary" type="submit">Sign in</button>
+            <input type="submit" value="Login" name="submit">
             </div>
                 <p>Don't have an account?<a href="{{ url('/register') }}">Sign Up</a></p>
         </form>
