@@ -15,7 +15,6 @@
             <a class="p-2 text-dark" href="#">Home</a>
             <a class="p-2 text-dark" href="#">Name</a>
         </nav>
-        <a class="btn btn-outline-primary" href="#">Sign up</a>
     </div>
     @yield('content')
     <script src="{{ Asset('js/app.js')}}"></script>
