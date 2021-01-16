@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ config('app.name')}}</title>
+    <link rel="stylesheet" href="{{ Asset('css/app.css')}}">
 </head>
 <body>
 <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
@@ -13,6 +14,8 @@
         <a class="p-2 text-dark" href="#">Name</a>
       </nav>
       <a class="btn btn-outline-primary" href="#">Sign up</a>
+      @yield('content')
+      <script src="{{ Asset('js/app.js')}}"></script>
     </div>
 </body>
 </html>
