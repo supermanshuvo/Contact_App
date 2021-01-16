@@ -14,7 +14,7 @@
             </div>
             <div class="form-group">
                 <button class="btn btn-info">Create Account</button>
-                <button class="btn btn-primary" type="submit"><a href="{{ route('login') }}">Sign in</a></button>
+                <a href="{{ url('/login') }}"><button class="btn btn-primary" type="submit">Sign in</button></a>
             </div>
         </form>
     </div>

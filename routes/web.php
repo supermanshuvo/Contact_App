@@ -17,8 +17,8 @@ Route::get('/', function () {
     return view('contact.index');
 });
 Route::get('/login',function(){
-    return view('contact.login')->name('login');
+    return view('contact.login');
 });
 Route::get('/register', function(){
-    return view('contact.register')->name('register');
+    return view('contact.register');
 });
