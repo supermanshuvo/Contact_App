@@ -12,13 +12,10 @@
                 <label for="inputPassword" class="sr-only">Password</label>
                 <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
             </div>
-            <div class="checkbox mb-3">
-                <label>
-                    <input type="checkbox" value="remember-me"> Remember me
-                </label>
+            <div class="form-group">
+                <button class="btn btn-primary" type="submit">Sign in</button>
+                <button class="btn btn-info">Create Account</button>
             </div>
-            <button class="btn btn-primary" type="submit">Sign in</button>
-            <button class="btn btn-info">Create Account</button>
         </form>
     </div>
 </div>
