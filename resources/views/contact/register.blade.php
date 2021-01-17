@@ -18,10 +18,10 @@
             </div>
             <div class="form-group">
                 <label for="inputPassword" class="sr-only">Confirm Password :</label>
-                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Confirm Password" required>
             </div>
             <div class="form-group">
-                <input type="submit" value="Submit" name="submit">
+                <input type="submit" value="Submit" name="submit" class="btn btn-primary">
                 <p>Already have an account<a href="{{ url('/login') }}"> Login Now</a></p>
             </div>
         </form>
