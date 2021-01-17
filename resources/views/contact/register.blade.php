@@ -10,7 +10,7 @@
             </div>
             <div class="form-group">
                 <label for="inputEmail" class="sr-only">Email address</label>
-                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
             </div>
             <div class="form-group">
                 <label for="inputPassword" class="sr-only">Password :</label>
