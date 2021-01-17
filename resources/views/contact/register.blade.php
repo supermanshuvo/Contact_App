@@ -9,15 +9,15 @@
                 <input type="text" name="firstName" id="firstName" class="form-control" placeholder="Enter your Name">
             </div>
             <div class="form-group">
-                <label for="inputEmail" class="sr-only">Email address</label>
+                <label for="inputEmail">Email address</label>
                 <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
             </div>
             <div class="form-group">
-                <label for="inputPassword" class="sr-only">Password :</label>
+                <label for="inputPassword">Password :</label>
                 <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
             </div>
             <div class="form-group">
-                <label for="inputPassword" class="sr-only">Confirm Password :</label>
+                <label for="inputPassword">Confirm Password :</label>
                 <input type="password" id="inputPassword" class="form-control" placeholder="Confirm Password" required>
             </div>
             <div class="form-group">
