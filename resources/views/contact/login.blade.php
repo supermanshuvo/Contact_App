@@ -2,6 +2,8 @@
 @section('content')
 <div class="container">
     <div class="row d-flex justify-content-center">
+        <div class="card">
+            <div class="card-body">            
         <form>
             <h1 class="h3 mb-3 font-weight-normal">Login Now</h1>
             <div class="form-group">
@@ -17,6 +19,8 @@
             </div>
                 <p>Don't have an account?<a href="{{ url('/register') }}">Sign Up</a></p>
         </form>
+            </div>
+        </div>
     </div>
 </div>
 
