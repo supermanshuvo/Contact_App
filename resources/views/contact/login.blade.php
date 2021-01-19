@@ -3,7 +3,7 @@
 <div class="container">
     <div class="row d-flex justify-content-center">
         <form>
-            <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+            <h1 class="h3 mb-3 font-weight-normal">Login Now</h1>
             <div class="form-group">
                 <label for="inputEmail">Email address</label>
                 <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
