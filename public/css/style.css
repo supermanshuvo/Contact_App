@@ -2,6 +2,9 @@
 
 .bg-style{
     font-family: 'Roboto', sans-serif;
-    border-radius: 10px;
-    background-color: #152e66;
-}
+    border-radius: 20px;
+    width: 60%;
+    padding: 60px;
+    color: #ffffff;
+    margin: 50px;
+    background-color: #152e66;}
