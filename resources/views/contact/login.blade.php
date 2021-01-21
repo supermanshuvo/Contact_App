@@ -10,7 +10,7 @@
                             <h3>Welcome</h3>
                             <p>to</p>
                             <h3>Contact App</h3>
-                            <img src="img/user-circle-regular.svg" alt="There is an User Image">
+                            <img src="img/user.png" alt="There is an user">
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
