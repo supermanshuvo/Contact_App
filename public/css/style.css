@@ -1,5 +1,10 @@
+/* ******************************** */
+/* Add Font in HTML PAGE */
+/* ******************************** */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,400&display=swap');
-
+/* ******************************** */
+/* Background Styling */
+/* ******************************** */
 .bg-style{
     font-family: 'Roboto', sans-serif;
     border-radius: 20px;
@@ -9,12 +14,22 @@
     background-color: #3c5ca2;
     margin: 80px;
 }
+/* ******************************** */
+/* Login Icon Image  */
+/* ******************************** */
 .bg-style img{
     width: 170px;
 }
+/* ******************************** */
+/* A css add */
+/* ******************************** */
 a{
+    text-decoration: none;
     color: #000000;
 }
+/* ******************************** */
+/* A hover effect */
+/* ******************************** */
 a:hover{
     color: #ffffff;
 }

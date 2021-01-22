@@ -2,8 +2,14 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
+    <!-- ********************* -->
+    <!-- START CARD -->
+    <!-- ********************* -->
         <div class="card bg-style">
             <div class="card-body">
+            <!-- ********************* -->
+            <!-- START REGISTER FORM -->
+            <!-- ********************* -->
                 <form>
                     <h1 class="h3 mb-3 font-weight-normal">Please Input your Information</h1>
                     <div class="form-group">
@@ -29,6 +35,9 @@
                         <p>Already have an account<a href="{{ url('/login') }}"> Login Now</a></p>
                     </div>
                 </form>
+                <!-- ********************* -->
+                <!-- END REGISTER FORM -->
+                <!-- ********************* -->
             </div>
         </div>
     </div>

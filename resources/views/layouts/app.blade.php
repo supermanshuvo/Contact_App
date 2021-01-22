@@ -4,13 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- START TITLE -->
     <title>{{ config('app.name')}}</title>
+    <!-- END TITLE -->
+    <!-- START CSS LINK -->
     <link rel="stylesheet" href="{{ Asset('css/app.css')}}">
     <link rel="stylesheet" href="css/style.css">
+    <!-- END CSS LINK -->
 </head>
 
 <body>
-    <!-- Fixed navbar -->
+    <!-- ********************* -->
+    <!-- START NAVBAR -->
+    <!-- ********************* -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <a class="navbar-brand" href="#">{{ config('app.name')}}</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,14 +30,22 @@
         </ul>
         <form class="form-inline mt-2 mt-md-0">
           <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
         </form>
       </div>
     </nav>
-
+<!-- ********************* -->
+<!-- END NAVBAR -->
+<!-- ********************* -->
 
     @yield('content')
+    <!-- ********************* -->
+    <!-- START JS FILE LINK -->
+    <!-- ********************* -->
     <script src="{{ Asset('js/app.js')}}"></script>
+    <!-- ********************* -->
+    <!-- END JS FILE LINK -->
+    <!-- ********************* -->
 </body>
 
 </html>
