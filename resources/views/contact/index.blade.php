@@ -7,6 +7,7 @@
             <h3>User name</h3>
             <a href="{{ url('/logout') }}"><input type="button" value="Logout" class="btn btn-warning"></a>
         </div>
+        <!-- START TABLE -->
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
             <table class="table">
                 <thead class="thead-dark">
@@ -32,9 +33,20 @@
                         <td>Larry</td>
                         <td>01700000002</td>
                     </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>Shuvo</td>
+                        <td>01303316865</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>Moyna</td>
+                        <td>01791623736</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
+        <!-- END TABLE -->
     </div>
 </div>
 
