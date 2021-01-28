@@ -50,6 +50,9 @@
                     </tr>
                 </tbody>
             </table>
+            <div class="addButton">
+                <button class="btn btn-secondary">Add New Contact</button>
+            </div>
         </div>
         <!-- END TABLE -->
     </div>
