@@ -3,12 +3,17 @@
 <div class="container">
     <h1 class="text-center">Welcome to the Contact app</h1>
     <div class="row mt-5">
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-            <h3>User name</h3>
-            <a href="{{ url('/logout') }}"><input type="button" value="Logout" class="btn btn-warning"></a>
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+            <div class="user">
+                <img src="img/usericon.png" class="img-fluid img-thumbnail mb-5" alt="There Is an User Icon">
+                <h3>User name</h3>
+            </div>
+            <div class="logout mt-5">
+                <a href="{{ url('/logout') }}"><input type="button" value="Logout" class="btn btn-warning"></a>
+            </div>
         </div>
         <!-- START TABLE -->
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 ml-5">
             <table class="table">
                 <thead class="thead-dark">
                     <tr>
