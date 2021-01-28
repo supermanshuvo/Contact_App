@@ -6,7 +6,7 @@
         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
             <div class="user">
                 <img src="img/usericon.png" class="img-fluid img-thumbnail mb-5" alt="There Is an User Icon">
-                <h3>User name</h3>
+                <h3>User Name : SupermanShuvo</h3>
             </div>
             <div class="logout mt-5">
                 <a href="{{ url('/logout') }}"><input type="button" value="Logout" class="btn btn-warning"></a>
