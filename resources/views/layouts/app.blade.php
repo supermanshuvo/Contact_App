@@ -10,6 +10,7 @@
     <!-- START CSS LINK -->
     <link rel="stylesheet" href="{{ Asset('css/app.css')}}">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- END CSS LINK -->
 </head>
 
