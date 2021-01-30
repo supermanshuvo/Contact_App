@@ -56,9 +56,6 @@
                     </tr>
                 </tbody>
             </table>
-            <div class="addButton">
-                <a href="{{ url('/add') }}" class="btn btn-secondary">Add New Contact</a>
-            </div>
         </div>
         <!-- END TABLE -->
     </div>
