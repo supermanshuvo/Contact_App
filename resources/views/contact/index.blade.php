@@ -20,7 +20,7 @@
                         <th scope="col">Sl No.</th>
                         <th scope="col">Name</th>
                         <th scope="col">Number</th>
-                        <th>Action</th>
+                        <th scope="col">Action</th>
                     </tr>
                 </thead>
                 <tbody>
