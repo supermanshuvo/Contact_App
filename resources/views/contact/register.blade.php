@@ -18,8 +18,12 @@
                             placeholder="Enter your Name">
                     </div>
                     <div class="form-group">
-                        <label for="inputEmail">Email address</label>
+                        <label for="inputEmail">Email address :</label>
                         <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="number">Number :</label>
+                        <input type="number" name="number" id="number" class="form-control" placeholder="Enter Phone Number">
                     </div>
                     <div class="form-group">
                         <label for="inputPassword">Password :</label>
