@@ -22,3 +22,6 @@ Route::get('/login',function(){
 Route::get('/register', function(){
     return view('contact.register');
 });
+Route::get('/edit',function(){
+    return view('contact.edit');
+});
