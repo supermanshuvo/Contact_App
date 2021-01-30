@@ -22,6 +22,9 @@ Route::get('/login',function(){
 Route::get('/register', function(){
     return view('contact.register');
 });
-Route::get('/edit',function(){
+Route::get('/edit', function(){
     return view('contact.edit');
+});
+Route::get('/add', function(){
+    return view('contact.add');
 });
