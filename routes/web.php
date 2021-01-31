@@ -28,3 +28,6 @@ Route::get('/edit', function(){
 Route::get('/add', function(){
     return view('contact.add');
 })->name('add');
+Route::get('/logout', function(){
+    return view('contact.login');
+})->name('logout');

@@ -16,7 +16,7 @@
                 <!-- START Edit FORM HEADER -->
                 <!-- ********************* -->
                 <h1 class="h3 mb-3 font-weight-normal">Add A New Contact</h1>
-                <a href="{{ url('/') }}" class="btn btn-primary">Go Back</a>
+                <a href="{{ route('index') }}" class="btn btn-primary">Go Back</a>
                 <!-- ******************** -->
                 <!-- START EDIT FORM -->
                 <!-- ******************** -->

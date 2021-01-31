@@ -20,7 +20,7 @@
                 <h3>User Name : SupermanShuvo</h3>
             </div>
             <div class="logout mt-5">
-                <a href="{{ url('/logout') }}"><input type="button" value="Logout" class="btn btn-warning"></a>
+                <a href="{{ route('logout') }}"><input type="button" value="Logout" class="btn btn-warning"></a>
             </div>
         </div>
     <!-- ********************* -->
@@ -41,31 +41,31 @@
                         <th scope="row">1</th>
                         <td>Mark</td>
                         <td>01700000000</td>
-                        <td><a href="{{ url('/edit') }}"><i class="fa fa-edit" style="font-size:24px;color:blue"></i></a> <i class="fa fa-trash-o" style="font-size:24px;color:red"></i></td>
+                        <td><a href="{{ route('edit') }}"><i class="fa fa-edit" style="font-size:24px;color:blue"></i></a> <i class="fa fa-trash-o" style="font-size:24px;color:red"></i></td>
                     </tr>
                     <tr>
                         <th scope="row">2</th>
                         <td>Jacob</td>
                         <td>01700000001</td>
-                        <td><a href="{{ url('/edit') }}"><i class="fa fa-edit" style="font-size:24px;color:blue"></i></a> <i class="fa fa-trash-o" style="font-size:24px;color:red"></i></td>
+                        <td><a href="{{ route('edit') }}"><i class="fa fa-edit" style="font-size:24px;color:blue"></i></a> <i class="fa fa-trash-o" style="font-size:24px;color:red"></i></td>
                     </tr>
                     <tr>
                         <th scope="row">3</th>
                         <td>Larry</td>
                         <td>01700000002</td>
-                        <td><a href="{{ url('/edit') }}"><i class="fa fa-edit" style="font-size:24px;color:blue"></i></a> <i class="fa fa-trash-o" style="font-size:24px;color:red"></i></td>
+                        <td><a href="{{ route('edit') }}"><i class="fa fa-edit" style="font-size:24px;color:blue"></i></a> <i class="fa fa-trash-o" style="font-size:24px;color:red"></i></td>
                     </tr>
                     <tr>
                         <th scope="row">4</th>
                         <td>Shuvo</td>
                         <td>01303316865</td>
-                        <td><a href="{{ url('/edit') }}"><i class="fa fa-edit" style="font-size:24px;color:blue"></i></a> <i class="fa fa-trash-o" style="font-size:24px;color:red"></i></td>
+                        <td><a href="{{ route('edit') }}"><i class="fa fa-edit" style="font-size:24px;color:blue"></i></a> <i class="fa fa-trash-o" style="font-size:24px;color:red"></i></td>
                     </tr>
                     <tr>
                         <th scope="row">5</th>
                         <td>Moyna</td>
                         <td>01791623736</td>
-                        <td><a href="{{ url('/edit') }}"><i class="fa fa-edit" style="font-size:24px;color:blue"></i></a> <i class="fa fa-trash-o" style="font-size:24px;color:red"></i></td>
+                        <td><a href="{{ route('edit') }}"><i class="fa fa-edit" style="font-size:24px;color:blue"></i></a> <i class="fa fa-trash-o" style="font-size:24px;color:red"></i></td>
                     </tr>
                 </tbody>
             </table>

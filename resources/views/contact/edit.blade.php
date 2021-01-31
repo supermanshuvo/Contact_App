@@ -16,7 +16,7 @@
             <!-- START Edit FORM -->
             <!-- ********************* -->
             <h1 class="h3 mb-3 font-weight-normal">Edit Contact</h1>
-            <a href="{{ url('/') }}" class="btn btn-primary">Go Back</a>
+            <a href="{{ route('index') }}" class="btn btn-primary">Go Back</a>
                 <form>
                     
                     <div class="form-group">
