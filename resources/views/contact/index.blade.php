@@ -10,6 +10,9 @@
 <!-- START CONTENT SECTION -->
 <!-- ******************************** -->
 @section('content')
+<!-- ********************* -->
+<!-- START CONTAINER -->
+<!-- ********************* -->
 <div class="container">
 <!--  -->
     <h1 class="text-center heading-style">Welcome To The Contact App</h1>
