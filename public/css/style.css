@@ -33,3 +33,12 @@ a{
 a:hover{
     color: #ffffff;
 }
+/* ******************************** */
+/* Heading style */
+/* ******************************** */
+.heading-style
+{
+    margin-top: 5rem;
+    font-family: 'Roboto', sans-serif;
+    font-style: bold;
+}

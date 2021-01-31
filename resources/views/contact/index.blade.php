@@ -11,7 +11,8 @@
 <!-- ******************************** -->
 @section('content')
 <div class="container">
-    <h1 class="text-center">Welcome to the Contact app</h1>
+<!--  -->
+    <h1 class="text-center heading-style">Welcome To The Contact App</h1>
     <div class="row mt-5">
         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
             <div class="user">
