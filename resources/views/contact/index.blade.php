@@ -14,8 +14,13 @@
 <!-- START CONTAINER -->
 <!-- ********************* -->
 <div class="container">
-<!--  -->
+<!-- ********************* -->
+<!-- START Header Area -->
+<!-- ********************* -->
     <h1 class="text-center heading-style">Welcome To The Contact App</h1>
+<!-- ********************* -->
+<!-- END Header Area -->
+<!-- ********************* -->
     <div class="row mt-5">
         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
             <div class="user">
@@ -26,7 +31,9 @@
                 <a href="{{ url('/logout') }}"><input type="button" value="Logout" class="btn btn-warning"></a>
             </div>
         </div>
+    <!-- ********************* -->
         <!-- START TABLE -->
+    <!-- ********************* -->        
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 ml-5">
             <table class="table">
                 <thead class="thead-dark">
@@ -71,7 +78,9 @@
                 </tbody>
             </table>
         </div>
+    <!-- ********************* -->
         <!-- END TABLE -->
+    <!-- ********************* -->
     </div>
 </div>
 <!-- ******************************** -->
