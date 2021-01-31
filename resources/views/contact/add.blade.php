@@ -10,6 +10,9 @@
 <!-- START CONTENT SECTION -->
 <!-- ******************************** -->
 @section('content')
+<!-- ********************* -->
+<!-- START CONTAINER -->
+<!-- ********************* -->
 <div class="container">
     <div class="row justify-content-center">
         <!-- ********************* -->
