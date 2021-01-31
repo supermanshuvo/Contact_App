@@ -15,16 +15,16 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('contact.index');
-});
+})->name('index');
 Route::get('/login',function(){
     return view('contact.login');
-});
+})->name('login');
 Route::get('/register', function(){
     return view('contact.register');
-});
+})->name('register');
 Route::get('/edit', function(){
     return view('contact.edit');
-});
+})->name('edit');
 Route::get('/add', function(){
     return view('contact.add');
-});
+})->name('add');
