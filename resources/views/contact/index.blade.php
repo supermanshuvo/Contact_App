@@ -1,7 +1,6 @@
 <!-- ADD EXTENDS PHP LAYOUTS PROPERTY -->
 @extends('layouts.app')
-
-<!-- START CONTENT SECTION -->
+<!-- ADD CONTENT SECTION -->
 @section('content')
 <!-- ********************* -->
 <!-- START CONTAINER -->
