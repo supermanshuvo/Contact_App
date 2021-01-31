@@ -42,3 +42,9 @@ a:hover{
     font-family: 'Roboto', sans-serif;
     font-style: bold;
 }
+/* ******************************** */
+/* Margin bottom */
+/* ******************************** */
+.mb-20{
+    margin-bottom: 20px;
+}

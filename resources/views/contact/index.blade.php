@@ -13,7 +13,7 @@
                 <img src="img/usericon.png" class="img-fluid img-thumbnail mb-5" alt="There Is an User Icon">
                 <h3>User Name : SupermanShuvo</h3>
             </div>
-            <div class="logout mt-5 md-5">
+            <div class="logout mt-5 mb-20">
                 <a href="{{ route('logout') }}"><input type="button" value="Logout" class="btn btn-warning"></a>
             </div>
         </div>
