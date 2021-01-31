@@ -15,9 +15,7 @@
 </head>
 
 <body>
-    <!-- ********************* -->
     <!-- START NAVBAR -->
-    <!-- ********************* -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
       <a class="navbar-brand" href="{{ route('index') }}">{{ config('app.name')}}</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,18 +36,12 @@
         </form>
       </div>
     </nav>
-<!-- ********************* -->
 <!-- END NAVBAR -->
-<!-- ********************* -->
 
     @yield('content')
-    <!-- ********************* -->
     <!-- START JS FILE LINK -->
-    <!-- ********************* -->
     <script src="{{ Asset('js/app.js')}}"></script>
-    <!-- ********************* -->
     <!-- END JS FILE LINK -->
-    <!-- ********************* -->
 </body>
 
 </html>

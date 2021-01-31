@@ -2,20 +2,14 @@
 @extends('layouts.app')
 <!-- ADD CONTENT SECTION -->
 @section('content')
-<!-- ********************* -->
 <!-- START CONTAINER -->
-<!-- ********************* -->
 <div class="container">
     <div class="row d-flex justify-content-center">
-        <!-- ********************* -->
         <!-- Login Card Start -->
-        <!-- ********************* -->
         <div class="card bg-style">
             <div class="card-body">
                 <div class="row">
-                <!-- ********************* -->
                 <!-- Start Left Text -->
-                <!-- ********************* -->
                     <div class="col-sm-12 col-xs-12 col-md-6 col-lg-6 col-xl-6">
                         <div class="text-center">
                             <h3>Welcome</h3>
@@ -24,12 +18,9 @@
                             <img src="img/user.png" alt="There is an user">
                         </div>
                     </div>
-                    <!-- ********************* -->
                     <!-- End Left Text -->
-                    <!-- ********************* -->
-                    <!-- ********************* -->
+
                     <!-- Start Login Form -->
-                    <!-- ********************* -->
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                         <form>
                             <h1 class="h3 mb-3 font-weight-normal">Login Now</h1>
@@ -49,22 +40,13 @@
                             <p>Don't have an account?<a href="{{ route('register') }}"> Sign Up</a></p>
                         </form>
                     </div>
-                    <!-- ********************* -->
                     <!-- End Login Form -->
-                    <!-- ********************* -->
                 </div>
             </div>
         </div>
-        <!-- ********************* -->
         <!-- End card -->
-        <!-- ********************* -->
     </div>
 </div>
-<!-- ******************************** -->
 <!-- END CONTAINER AREA -->
-<!-- ******************************** -->
 
 @endsection
-<!-- ******************************** -->
-<!-- END CONTENT  SECTION -->
-<!-- ******************************** -->
