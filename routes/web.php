@@ -15,19 +15,19 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('contact.index');
-})->name('index');
+})->name('contact_index');
 Route::get('/login',function(){
     return view('contact.login');
-})->name('login');
+})->name('contact_login');
 Route::get('/register', function(){
     return view('contact.register');
-})->name('register');
+})->name('contact_register');
 Route::get('/edit', function(){
     return view('contact.edit');
-})->name('edit');
+})->name('contact_edit');
 Route::get('/add', function(){
     return view('contact.add');
-})->name('add');
+})->name('contact_add');
 Route::get('/logout', function(){
     return view('contact.login');
-})->name('logout');
+})->name('contact_logout');
