@@ -10,7 +10,7 @@
             <div class="card-body">
                 <!-- START Edit FORM HEADER -->
                 <h1 class="h3 mb-3 font-weight-normal">Add A New Contact</h1>
-                <a href="{{ route('index') }}" class="btn btn-primary">Go Back</a>
+                <a href="{{ route('contact_index') }}" class="btn btn-primary">Go Back</a>
                 <!-- START EDIT FORM -->
                 <form>
 

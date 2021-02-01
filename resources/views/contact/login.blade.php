@@ -37,7 +37,7 @@
                             <div class="form-group">
                                 <input type="submit" value="Login" name="submit" class="btn btn-primary">
                             </div>
-                            <p>Don't have an account?<a href="{{ route('register') }}"> Sign Up</a></p>
+                            <p>Don't have an account?<a href="{{ route('contact_register') }}"> Sign Up</a></p>
                         </form>
                     </div>
                     <!-- End Login Form -->
