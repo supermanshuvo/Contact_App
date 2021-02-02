@@ -24,6 +24,4 @@ Route::get('/login', [LoginController::class,'index'])->name('contact_login');
 Route::get('/register', [RegisterController::class,'index'])->name('contact_register');
 Route::get('/edit', [EditController::class,'index'])->name('contact_edit');
 Route::get('/add', [AddController::class,'index'])->name('contact_add');
-Route::get('/logout', function(){
-    return view('contact.login');
-})->name('contact_logout');
+Route::get('/logout', [IndexController::class,'index'])->name('contact_logout');
