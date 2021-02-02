@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\BackEnd;
 
 use App\Http\Controllers\Controller;
-use App\Models\cr;
 use Illuminate\Http\Request;
 
 class IndexController extends Controller
@@ -42,10 +41,10 @@ class IndexController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\cr  $cr
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(cr $cr)
+    public function show($id)
     {
         //
     }
@@ -53,10 +52,10 @@ class IndexController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\cr  $cr
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(cr $cr)
+    public function edit($id)
     {
         //
     }
@@ -65,10 +64,10 @@ class IndexController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\cr  $cr
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, cr $cr)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -76,10 +75,10 @@ class IndexController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\cr  $cr
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(cr $cr)
+    public function destroy($id)
     {
         //
     }
