@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\IndexController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,9 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('contact.index');
-})->name('contact_index');
+Route::get('/', [IndexController::class,'index'])->name('contact_index');
 Route::get('/login',function(){
     return view('contact.login');
 })->name('contact_login');
