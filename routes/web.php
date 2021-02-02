@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BackEnd\IndexController;
 use App\Http\Controllers\BackEnd\LoginController;
+use App\Http\Controllers\BackEnd\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,9 +18,7 @@ use App\Http\Controllers\BackEnd\LoginController;
 
 Route::get('/', [IndexController::class,'index'])->name('contact_index');
 Route::get('/login', [LoginController::class,'index'])->name('contact_login');
-Route::get('/register', function(){
-    return view('contact.register');
-})->name('contact_register');
+Route::get('/register', [RegisterController::class,'index'])->name('contact_register');
 Route::get('/edit', function(){
     return view('contact.edit');
 })->name('contact_edit');
