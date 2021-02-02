@@ -5,6 +5,8 @@ use App\Http\Controllers\BackEnd\IndexController;
 use App\Http\Controllers\BackEnd\LoginController;
 use App\Http\Controllers\BackEnd\RegisterController;
 use App\Http\Controllers\BackEnd\EditController;
+use App\Http\Controllers\BackEnd\AddController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -21,9 +23,7 @@ Route::get('/', [IndexController::class,'index'])->name('contact_index');
 Route::get('/login', [LoginController::class,'index'])->name('contact_login');
 Route::get('/register', [RegisterController::class,'index'])->name('contact_register');
 Route::get('/edit', [EditController::class,'index'])->name('contact_edit');
-Route::get('/add', function(){
-    return view('contact.add');
-})->name('contact_add');
+Route::get('/add', [AddController::class,'index'])->name('contact_add');
 Route::get('/logout', function(){
     return view('contact.login');
 })->name('contact_logout');
