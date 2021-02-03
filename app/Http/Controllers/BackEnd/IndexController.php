@@ -4,6 +4,7 @@ namespace App\Http\Controllers\BackEnd;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Number;
 
 class IndexController extends Controller
 {
@@ -14,6 +15,7 @@ class IndexController extends Controller
      */
     public function index()
     {
+        Number::all();
         return view('contact.index');
     }
 
