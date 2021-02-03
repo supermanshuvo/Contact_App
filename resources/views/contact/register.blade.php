@@ -12,7 +12,7 @@
                 <form>
                     <h1 class="h3 mb-3 font-weight-normal">Please Input your Information</h1>
                     <div class="form-group">
-                        <label for="firstName">First Name : </label>
+                        <label for="firstName">Name : </label>
                         <input type="text" name="firstName" id="firstName" class="form-control"
                             placeholder="Enter your Name">
                     </div>
