@@ -17,7 +17,7 @@ class CreateNumbersTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('number');
-            $table->string('userId');
+            // $table->string('userId');
             $table->timestamps();
         });
     }

@@ -39,7 +39,6 @@ class AddController extends Controller
         $number = new Number;
         $number->name = $request->name;
         $number->number = $request->number;
-        $number->userId = $request->userId;
         $number->save();
         return redirect('add');
     }
