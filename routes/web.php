@@ -29,3 +29,4 @@ Route::get('/logout', [IndexController::class,'destroy'])->name('contact_logout'
 
 // All Post Method in here
 Route::post('/register',[RegisterController::class,'store'])->name('register');
+Route::post('/add', [AddController::class,'store'])->name('add');
