@@ -1,11 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\BackEnd\IndexController;
-use App\Http\Controllers\BackEnd\LoginController;
-use App\Http\Controllers\BackEnd\RegisterController;
-use App\Http\Controllers\BackEnd\EditController;
-use App\Http\Controllers\BackEnd\AddController;
+use App\Http\Controllers\BackEnd\ContactController;
 
 
 /*
