@@ -15,6 +15,9 @@ class CreateNumbersTable extends Migration
     {
         Schema::create('numbers', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('number');
+            $table->id('userId');
             $table->timestamps();
         });
     }
