@@ -18,10 +18,14 @@ use App\Http\Controllers\BackEnd\AddController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+// All Get Method in here
 Route::get('/', [IndexController::class,'index'])->name('contact_index');
 Route::get('/login', [LoginController::class,'index'])->name('contact_login');
 Route::get('/register', [RegisterController::class,'index'])->name('contact_register');
 Route::get('/edit', [EditController::class,'index'])->name('contact_edit');
 Route::get('/add', [AddController::class,'index'])->name('contact_add');
 Route::get('/logout', [IndexController::class,'destroy'])->name('contact_logout');
+
+
+// All Post Method in here
+Route::post('/register',[RegisterController::class,'store'])->name('register');

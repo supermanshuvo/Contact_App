@@ -9,7 +9,8 @@
         <div class="card bg-style">
             <div class="card-body">
             <!-- START REGISTER FORM -->
-                <form>
+                <form method="POST" action="{{ route('register') }}">
+                @csrf
                     <h1 class="h3 mb-3 font-weight-normal">Please Input your Information</h1>
                     <div class="form-group">
                         <label for="firstName">Name : </label>
