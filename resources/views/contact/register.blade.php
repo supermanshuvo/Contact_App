@@ -14,12 +14,12 @@
                     <h1 class="h3 mb-3 font-weight-normal">Please Input your Information</h1>
                     <div class="form-group">
                         <label for="firstName">Name : </label>
-                        <input type="text" name="firstName" id="firstName" class="form-control"
+                        <input type="text" name="name" id="firstName" class="form-control"
                             placeholder="Enter your Name">
                     </div>
                     <div class="form-group">
                         <label for="inputEmail">Email address :</label>
-                        <input type="email" id="inputEmail" class="form-control" placeholder="Email address">
+                        <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address">
                     </div>
                     <div class="form-group">
                         <label for="number">Number :</label>
@@ -27,11 +27,11 @@
                     </div>
                     <div class="form-group">
                         <label for="inputPassword">Password :</label>
-                        <input type="password" id="inputPassword" class="form-control" placeholder="Password">
+                        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password">
                     </div>
                     <div class="form-group">
                         <label for="inputPassword">Confirm Password :</label>
-                        <input type="password" id="inputPassword" class="form-control" placeholder="Confirm Password">
+                        <input type="password" name="confirm_password" id="inputPassword" class="form-control" placeholder="Confirm Password">
                     </div>
                     <div class="form-group">
                         <input type="submit" value="Submit" name="submit" class="btn btn-primary">

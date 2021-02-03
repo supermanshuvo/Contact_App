@@ -4,7 +4,7 @@ namespace App\Http\Controllers\BackEnd;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Model\Contact;
+use App\Models\Contact;
 
 class RegisterController extends Controller
 {
@@ -36,7 +36,12 @@ class RegisterController extends Controller
      */
     public function store(Request $request)
     {
-        
+        $contact = new Contact;   
+        $contact->name=$request->name;
+        $contact->email=$request->email;
+        $contact->number=$request->number;
+        $contact->password=$request->password;
+        $contact->save();
     }
 
     /**
