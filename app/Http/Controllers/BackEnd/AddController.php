@@ -4,6 +4,7 @@ namespace App\Http\Controllers\BackEnd;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Number;
 
 class AddController extends Controller
 {
@@ -38,6 +39,7 @@ class AddController extends Controller
         $number = new Number;
         $number->name = $request->name;
         $number->number = $request->number;
+        $number->userId = $request->userId;
         $number->save();
         return redirect('add');
     }
