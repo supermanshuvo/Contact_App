@@ -42,6 +42,7 @@ class RegisterController extends Controller
         $contact->number=$request->number;
         $contact->password=$request->password;
         $contact->save();
+        return redirect('register');
     }
 
     /**
