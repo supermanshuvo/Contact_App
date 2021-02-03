@@ -35,7 +35,11 @@ class AddController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $number = new Number;
+        $number->name = $request->name;
+        $number->number = $request->number;
+        $number->save();
+        return redirect('add');
     }
 
     /**
