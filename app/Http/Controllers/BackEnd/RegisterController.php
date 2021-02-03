@@ -4,6 +4,7 @@ namespace App\Http\Controllers\BackEnd;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Model\Contact;
 
 class RegisterController extends Controller
 {
@@ -35,7 +36,7 @@ class RegisterController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**
