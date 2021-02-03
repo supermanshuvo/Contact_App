@@ -29,14 +29,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
                     @foreach($numbers as $number)
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>01700000000</td>
+                    <tr>
+                        <th scope="row">{{ $loop->iteration }}</th>
+                        <td>{{ $number['name'] }}</td>
+                        <td>{{ $number['number'] }}</td>
                         <td><a href="{{ route('contact_edit') }}"><i class="fa fa-edit" style="font-size:24px;color:blue"></i></a> <i class="fa fa-trash-o" style="font-size:24px;color:red"></i></td>
-                    @endforeach
                     </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>

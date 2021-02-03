@@ -15,8 +15,8 @@ class IndexController extends Controller
      */
     public function index()
     {
-        Number::all();
-        return view('contact.index');
+        $data =Number::all();
+        return view('contact.index',['numbers'=>$data]);
     }
 
     /**
