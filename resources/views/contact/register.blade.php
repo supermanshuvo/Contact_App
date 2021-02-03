@@ -18,7 +18,7 @@
                     </div>
                     <div class="form-group">
                         <label for="inputEmail">Email address :</label>
-                        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
+                        <input type="email" id="inputEmail" class="form-control" placeholder="Email address">
                     </div>
                     <div class="form-group">
                         <label for="number">Number :</label>
@@ -26,12 +26,11 @@
                     </div>
                     <div class="form-group">
                         <label for="inputPassword">Password :</label>
-                        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                        <input type="password" id="inputPassword" class="form-control" placeholder="Password">
                     </div>
                     <div class="form-group">
                         <label for="inputPassword">Confirm Password :</label>
-                        <input type="password" id="inputPassword" class="form-control" placeholder="Confirm Password"
-                            required>
+                        <input type="password" id="inputPassword" class="form-control" placeholder="Confirm Password">
                     </div>
                     <div class="form-group">
                         <input type="submit" value="Submit" name="submit" class="btn btn-primary">
