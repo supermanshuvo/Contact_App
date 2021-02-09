@@ -16,7 +16,7 @@
                     <input type="hidden" name="id" value="{{$data->id}}">
                     <div class="form-group">
                         <label for="firstName">Name :</label>
-                        <input type="text" name="Name" id="firstName" class="form-control"
+                        <input type="text" name="name" id="firstName" class="form-control"
                             placeholder="Edit Name" value="{{$data->name}}" autocomplete="off">
                     </div>
                     <div class="form-group">
