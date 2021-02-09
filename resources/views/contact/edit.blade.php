@@ -12,7 +12,8 @@
             <h1 class="h3 mb-3 font-weight-normal">Edit Contact</h1>
             <a href="{{ route('contact_index') }}" class="btn btn-primary">Go Back</a>
                 <form>
-                    
+                    @csrf
+                    <input type="hidden" name="id" value="{{$data->id}}">
                     <div class="form-group">
                         <label for="firstName">Name :</label>
                         <input type="text" name="Name" id="firstName" class="form-control"
