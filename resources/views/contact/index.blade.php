@@ -34,7 +34,7 @@
                         <th scope="row">{{ $loop->iteration }}</th>
                         <td>{{ $number['name'] }}</td>
                         <td>{{ $number['number'] }}</td>
-                        <td><a href="{{ route('contact_edit') }}"><i class="fa fa-edit" style="font-size:24px;color:blue"></i></a> <a href="delete/{{$number->id}}"><i class="fa fa-trash-o" style="font-size:24px;color:red"></i></a></td>
+                        <td><a href="edit/{{$number->id}}"><i class="fa fa-edit" style="font-size:24px;color:blue"></i></a> <a href="delete/{{$number->id}}"><i class="fa fa-trash-o" style="font-size:24px;color:red"></i></a></td>
                     </tr>
                     @endforeach
                 </tbody>
