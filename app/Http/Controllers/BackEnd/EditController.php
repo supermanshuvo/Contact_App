@@ -4,6 +4,7 @@ namespace App\Http\Controllers\BackEnd;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Number;
 
 class EditController extends Controller
 {
@@ -57,7 +58,8 @@ class EditController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data = Number::find($id);
+        return view('contact.edit',compact('data'));
     }
 
     /**
