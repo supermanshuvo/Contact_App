@@ -11,7 +11,7 @@
             <!-- START Edit FORM -->
             <h1 class="h3 mb-3 font-weight-normal">Edit Contact</h1>
             <a href="{{ route('contact_index') }}" class="btn btn-primary">Go Back</a>
-                <form>
+                <form method="POST" action="{{ route('edit') }}">
                     @csrf
                     <input type="hidden" name="id" value="{{$data->id}}">
                     <div class="form-group">
@@ -21,7 +21,7 @@
                     </div>
                     <div class="form-group">
                         <label for="inputEmail">Number :</label>
-                        <input type="email" id="inputEmail" class="form-control" value="{{$data->number}}" placeholder="Edit Number" autocomplete="off">
+                        <input type="number" id="inputEmail" class="form-control" value="{{$data->number}}" placeholder="Edit Number" autocomplete="off">
                     </div>
                     <div class="form-group">
                         <input type="submit" value="Submit" name="submit" class="btn btn-primary">
