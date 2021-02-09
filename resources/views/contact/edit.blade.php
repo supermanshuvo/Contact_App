@@ -21,7 +21,7 @@
                     </div>
                     <div class="form-group">
                         <label for="inputEmail">Number :</label>
-                        <input type="number" id="inputEmail" class="form-control" value="{{$data->number}}" placeholder="Edit Number" autocomplete="off">
+                        <input type="number" name="number" id="inputEmail" class="form-control" value="{{$data->number}}" placeholder="Edit Number" autocomplete="off">
                     </div>
                     <div class="form-group">
                         <input type="submit" value="Submit" name="submit" class="btn btn-primary">

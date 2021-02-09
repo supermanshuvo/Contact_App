@@ -71,11 +71,12 @@ class EditController extends Controller
      */
     public function update(Request $request)
     {
-        $data = Number::find($request->id);
+        /* $data = Number::find($request->id);
         $data->name = $request->name;
         $data->number = $request->number;
         $data->save();
-        return redirect('/');
+        return redirect('/'); */
+        return $request->all();
     }
 
     /**
