@@ -80,6 +80,15 @@ class IndexController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+    public function delete($id)
+    {
+        $delete = Number::table('numbers')
+                    ->WHERE('id',$id)
+                    ->DELETE();
+        return redirect('contact.index');
+    }
+    
     public function destroy()
     {
         return view('contact.login');
