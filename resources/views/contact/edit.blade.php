@@ -17,11 +17,11 @@
                     <div class="form-group">
                         <label for="firstName">Name :</label>
                         <input type="text" name="Name" id="firstName" class="form-control"
-                            placeholder="Edit Name" autocomplete="off">
+                            placeholder="Edit Name" value="{{$data->name}}" autocomplete="off">
                     </div>
                     <div class="form-group">
                         <label for="inputEmail">Number :</label>
-                        <input type="email" id="inputEmail" class="form-control" placeholder="Edit Number" autocomplete="off">
+                        <input type="email" id="inputEmail" class="form-control" value="{{$data->number}}" placeholder="Edit Number" autocomplete="off">
                     </div>
                     <div class="form-group">
                         <input type="submit" value="Submit" name="submit" class="btn btn-primary">
