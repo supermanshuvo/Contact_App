@@ -5,6 +5,7 @@ namespace App\Http\Controllers\BackEnd;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Number;
+use Illuminate\Support\Facades\DB;
 
 class IndexController extends Controller
 {
@@ -83,10 +84,10 @@ class IndexController extends Controller
 
     public function delete($id)
     {
-        $delete = Number::table('numbers')
+        $delete = DB::table('numbers')
                     ->WHERE('id',$id)
                     ->DELETE();
-        return redirect('contact.index');
+        return redirect('/');
     }
     
     public function destroy()
