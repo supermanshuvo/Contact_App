@@ -36,6 +36,10 @@ class AddController extends Controller
      */
     public function store(Request $request)
     {
+        $validateData = $request->validate([
+            'name' => 'required',
+            'number'=> 'required|min:9|max:16',
+        ]);
         $number = new Number;
         $number->name = $request->name;
         $number->number = $request->number;
