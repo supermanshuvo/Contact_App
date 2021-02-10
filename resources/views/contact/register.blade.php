@@ -16,22 +16,37 @@
                         <label for="firstName">Name : </label>
                         <input type="text" name="name" id="firstName" class="form-control"
                             placeholder="Enter your Name">
+                            @error('name')
+                                <span class="text-danger">{{$message}}</span>
+                            @enderror
                     </div>
                     <div class="form-group">
                         <label for="inputEmail">Email address :</label>
                         <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address">
+                        @error('email')
+                            <span class="text-danger">{{$message}}</span>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label for="number">Number :</label>
                         <input type="number" name="number" id="number" class="form-control" placeholder="Enter Phone Number">
+                        @error('number')
+                            <span class="text-danger">{{$message}}</span>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label for="inputPassword">Password :</label>
                         <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password">
+                        @error('password')
+                            <span class="text-danger">{{$message}}</span>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label for="inputPassword">Confirm Password :</label>
                         <input type="password" name="confirm_password" id="inputPassword" class="form-control" placeholder="Confirm Password">
+                        @error('confirm_password')
+                            <span class="text-danger">{{$message}}</span>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <input type="submit" value="Submit" name="submit" class="btn btn-primary">
