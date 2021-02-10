@@ -18,10 +18,16 @@
                         <label for="firstName">Name :</label>
                         <input type="text" name="name" id="firstName" class="form-control"
                             placeholder="Edit Name" value="{{$data->name}}" autocomplete="off">
+                            @error('name')
+                                <span class="text-danger">{{$message}}</span>
+                            @enderror
                     </div>
                     <div class="form-group">
                         <label for="inputEmail">Number :</label>
                         <input type="number" name="number" id="inputEmail" class="form-control" value="{{$data->number}}" placeholder="Edit Number" autocomplete="off">
+                        @error('number')
+                           <span class="text-danger">{{$message}}</span>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <input type="submit" value="Submit" name="submit" class="btn btn-primary">
