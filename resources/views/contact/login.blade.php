@@ -26,12 +26,12 @@
                             <h1 class="h3 mb-3 font-weight-normal">Login Now</h1>
                             <div class="form-group">
                                 <label for="inputEmail">Email address</label>
-                                <input type="email" id="inputEmail" class="form-control" placeholder="Email address"
+                                <input type="email" name="email" value="{{ old('email') }}" id="inputEmail" class="form-control" placeholder="Email address"
                                     required autofocus>
                             </div>
                             <div class="form-group">
                                 <label for="inputPassword">Password</label>
-                                <input type="password" id="inputPassword" class="form-control" placeholder="Password"
+                                <input type="password" name="password" value="{{ old('password') }}" id="inputPassword" class="form-control" placeholder="Password"
                                     required>
                             </div>
                             <div class="form-group">
