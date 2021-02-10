@@ -73,7 +73,7 @@ class EditController extends Controller
     {
         $validateData = $request->validate([
             'name' => 'required',
-            'number'=> 'required|numeric|min:9|max:16',
+            'number'=> 'required|min:9|max:16',
         ]);
         $data = Number::find($request->id);
         $data->name = $request->name;
