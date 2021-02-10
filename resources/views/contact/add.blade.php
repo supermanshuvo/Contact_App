@@ -16,7 +16,7 @@
                     @csrf
                     <div class="form-group">
                         <label for="firstName">Name :</label>
-                        <input type="text" name="name" id="firstName" class="form-control" placeholder="Add Name"
+                        <input type="text" name="name" id="firstName" class="form-control" value="{{ old('name') }}" placeholder="Add Name"
                             autocomplete="off">
                             @error('name')
                                 <span class="text-danger">{{$message}}</span>
@@ -24,7 +24,7 @@
                     </div>
                     <div class="form-group">
                         <label for="inputEmail">Number :</label>
-                        <input type="number" name="number" id="inputEmail" class="form-control" placeholder="Add Number"
+                        <input type="number" name="number" id="inputEmail" class="form-control" value="{{ old('number') }}" placeholder="Add Number"
                             autocomplete="off">
                             @error('number')
                                 <span class="text-danger">{{$message}}</span>
