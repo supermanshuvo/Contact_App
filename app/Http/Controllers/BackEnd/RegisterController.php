@@ -36,12 +36,12 @@ class RegisterController extends Controller
      */
     public function store(Request $request)
     {
-        $request->valdate([
-            'name' => ['required'],
-            'email'=> ['required|email'],
-            'number'=> ['required|min:9|max:16'],
-            'password'=> ['required|min:6|max:16'],
-            'confirm_password'=> ['same:password'],
+        $validateData = $request->validate([
+            'name' => 'required',
+            'email'=> 'required|email|unique:users',
+            'number'=> 'required|min:9|max:16',
+            'password'=> 'required|min:6|max:16',
+            'confirm_password'=> 'same:password',
         ]);
         $contact = new Contact;   
         $contact->name=$request->name;
