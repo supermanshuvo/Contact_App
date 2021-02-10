@@ -28,11 +28,17 @@
                                 <label for="inputEmail">Email address</label>
                                 <input type="email" name="email" value="{{ old('email') }}" id="inputEmail" class="form-control" placeholder="Email address"
                                     required autofocus>
+                                @error('email')
+                                    <span class="text-danger">{{$message}}</span>
+                                @enderror
                             </div>
                             <div class="form-group">
                                 <label for="inputPassword">Password</label>
                                 <input type="password" name="password" value="{{ old('password') }}" id="inputPassword" class="form-control" placeholder="Password"
                                     required>
+                                @error('password')
+                                    <span class="text-danger">{{$message}}</span>
+                                @enderror
                             </div>
                             <div class="form-group">
                                 <input type="submit" value="Login" name="submit" class="btn btn-primary">
