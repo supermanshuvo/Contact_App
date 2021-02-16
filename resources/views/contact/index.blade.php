@@ -18,7 +18,7 @@
             </div>
         </div>
         <!-- START TABLE -->       
-        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 ml-5">
+        <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 ml-5">
             <table class="table">
                 <thead class="thead-dark">
                     <tr>
