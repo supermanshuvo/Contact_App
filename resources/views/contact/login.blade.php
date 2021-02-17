@@ -9,7 +9,7 @@
         <div class="card bg-style">
             <div class="card-body">
                 <div class="row">
-                <!-- Start Left Text -->
+                    <!-- Start Left Text -->
                     <div class="col-sm-12 col-xs-12 col-md-6 col-lg-6 col-xl-6">
                         <div class="text-center">
                             <h3>Welcome</h3>
@@ -23,21 +23,29 @@
                     <!-- Start Login Form -->
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                         <form>
+                            @csrf
+                            <div class="resutls">
+                                @if(Session::get('success'))
+                                <div class="alert alert-success">
+                                    {{ Session::get('success') }}
+                                </div>
+                                @endif
+                            </div>
                             <h1 class="h3 mb-3 font-weight-normal">Login Now</h1>
                             <div class="form-group">
                                 <label for="inputEmail">Email address</label>
-                                <input type="email" name="email" value="{{ old('email') }}" id="inputEmail" class="form-control" placeholder="Email address"
-                                    required autofocus>
+                                <input type="email" name="email" value="{{ old('email') }}" id="inputEmail"
+                                    class="form-control" placeholder="Email address" required autofocus>
                                 @error('email')
-                                    <span class="text-danger">{{$message}}</span>
+                                <span class="text-danger">{{$message}}</span>
                                 @enderror
                             </div>
                             <div class="form-group">
                                 <label for="inputPassword">Password</label>
-                                <input type="password" name="password" value="{{ old('password') }}" id="inputPassword" class="form-control" placeholder="Password"
-                                    required>
+                                <input type="password" name="password" value="{{ old('password') }}" id="inputPassword"
+                                    class="form-control" placeholder="Password" required>
                                 @error('password')
-                                    <span class="text-danger">{{$message}}</span>
+                                <span class="text-danger">{{$message}}</span>
                                 @enderror
                             </div>
                             <div class="form-group">

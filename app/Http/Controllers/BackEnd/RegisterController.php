@@ -43,13 +43,21 @@ class RegisterController extends Controller
             'password'=> 'required|min:6|max:16',
             'confirm_password'=> 'same:password',
         ]);
+        /* if ($validate->fails()) {
+            return view('register');
+        } */
         $contact = new Contact;   
         $contact->name=$request->name;
         $contact->email=$request->email;
         $contact->number=$request->number;
         $contact->password=$request->password;
-        $contact->save();
-        return redirect('register');
+        $query = $contact->save();
+        
+        if($validateData){
+            return redirect('login')->with('success','You have successfully registered');
+        }else{
+            return redirect('register')->with('fail','Sorry Try Again');
+        }
     }
 
     /**

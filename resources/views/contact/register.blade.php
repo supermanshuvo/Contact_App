@@ -5,47 +5,56 @@
 <!-- START CONTAINER -->
 <div class="container">
     <div class="row justify-content-center">
-    <!-- START CARD -->
+        <!-- START CARD -->
         <div class="card bg-style">
             <div class="card-body">
-            <!-- START REGISTER FORM -->
+                <!-- START REGISTER FORM -->
                 <form method="POST" action="{{ route('register') }}">
-                @csrf
+                    @csrf
+                    @if(Session::get('fail'))
+                    <div class="alert alert-success">
+                        {{ Session::get('fail') }}
+                    </div>
+                    @endif
                     <h1 class="h3 mb-3 font-weight-normal">Please Input your Information</h1>
                     <div class="form-group">
                         <label for="firstName">Name : </label>
                         <input type="text" name="name" value="{{ old('name') }}" id="firstName" class="form-control"
                             placeholder="Enter your Name">
-                            @error('name')
-                                <span class="text-danger">{{$message}}</span>
-                            @enderror
+                        @error('name')
+                        <span class="text-danger">{{$message}}</span>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label for="inputEmail">Email address :</label>
-                        <input type="email" name="email" value="{{ old('email') }}" id="inputEmail" class="form-control" placeholder="Email address">
+                        <input type="email" name="email" value="{{ old('email') }}" id="inputEmail" class="form-control"
+                            placeholder="Email address">
                         @error('email')
-                            <span class="text-danger">{{$message}}</span>
+                        <span class="text-danger">{{$message}}</span>
                         @enderror
                     </div>
                     <div class="form-group">
                         <label for="number">Number :</label>
-                        <input type="number" name="number" value="{{ old('number') }}" id="number" class="form-control" placeholder="Enter Phone Number">
+                        <input type="number" name="number" value="{{ old('number') }}" id="number" class="form-control"
+                            placeholder="Enter Phone Number">
                         @error('number')
-                            <span class="text-danger">{{$message}}</span>
+                        <span class="text-danger">{{$message}}</span>
                         @enderror
                     </div>
                     <div class="form-group">
                         <label for="inputPassword">Password :</label>
-                        <input type="password" name="password" value="{{ old('password') }}" id="inputPassword" class="form-control" placeholder="Password">
+                        <input type="password" name="password" value="{{ old('password') }}" id="inputPassword"
+                            class="form-control" placeholder="Password">
                         @error('password')
-                            <span class="text-danger">{{$message}}</span>
+                        <span class="text-danger">{{$message}}</span>
                         @enderror
                     </div>
                     <div class="form-group">
                         <label for="inputPassword">Confirm Password :</label>
-                        <input type="password" name="confirm_password" value="{{ old('confirm_password') }}" id="inputPassword" class="form-control" placeholder="Confirm Password">
+                        <input type="password" name="confirm_password" value="{{ old('confirm_password') }}"
+                            id="inputPassword" class="form-control" placeholder="Confirm Password">
                         @error('confirm_password')
-                            <span class="text-danger">{{$message}}</span>
+                        <span class="text-danger">{{$message}}</span>
                         @enderror
                     </div>
                     <div class="form-group">
