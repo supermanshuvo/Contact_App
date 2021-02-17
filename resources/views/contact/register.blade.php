@@ -11,11 +11,6 @@
                 <!-- START REGISTER FORM -->
                 <form method="POST" action="{{ route('register') }}">
                     @csrf
-                    @if(Session::get('fail'))
-                    <div class="alert alert-success">
-                        {{ Session::get('fail') }}
-                    </div>
-                    @endif
                     <h1 class="h3 mb-3 font-weight-normal">Please Input your Information</h1>
                     <div class="form-group">
                         <label for="firstName">Name : </label>
@@ -27,7 +22,7 @@
                     </div>
                     <div class="form-group">
                         <label for="inputEmail">Email address :</label>
-                        <input type="email" name="email" value="{{ old('email') }}" id="inputEmail" class="form-control"
+                        <input type="text" name="email" value="{{ old('email') }}" id="inputEmail" class="form-control"
                             placeholder="Email address">
                         @error('email')
                         <span class="text-danger">{{$message}}</span>
@@ -35,7 +30,7 @@
                     </div>
                     <div class="form-group">
                         <label for="number">Number :</label>
-                        <input type="number" name="number" value="{{ old('number') }}" id="number" class="form-control"
+                        <input type="text" name="number" value="{{ old('number') }}" id="number" class="form-control"
                             placeholder="Enter Phone Number">
                         @error('number')
                         <span class="text-danger">{{$message}}</span>
