@@ -14,6 +14,13 @@
                 <!-- START EDIT FORM -->
                 <form method="POST" action="{{ route('add') }}">
                     @csrf
+                    <div class="resutls">
+                                @if(Session::get('success'))
+                                <div class="alert alert-success">
+                                    {{ Session::get('success') }}
+                                </div>
+                                @endif
+                    </div>
                     <div class="form-group">
                         <label for="firstName">Name :</label>
                         <input type="text" name="name" id="firstName" class="form-control" value="{{ old('name') }}" placeholder="Add Name"

@@ -38,13 +38,15 @@ class AddController extends Controller
     {
         $validateData = $request->validate([
             'name' => 'required',
-            'number'=> 'required|Numeric|min:9|max:16',
+            'number'=> 'required|min:9|max:16',
         ]);
         $number = new Number;
         $number->name = $request->name;
         $number->number = $request->number;
-        $number->save();
-        return redirect('add');
+        $query = $number->save();
+        if($validateData){
+            return redirect('add')->with('success','You have successfully Add New Contact');
+        }
     }
 
     /**
