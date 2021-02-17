@@ -19,6 +19,13 @@
         </div>
         <!-- START TABLE -->       
         <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 ml-5">
+        <div class="resutls">
+                                @if(Session::get('success'))
+                                <div class="alert alert-success">
+                                    {{ Session::get('success') }}
+                                </div>
+                                @endif
+                    </div>
             <table class="table">
                 <thead class="thead-dark">
                     <tr>

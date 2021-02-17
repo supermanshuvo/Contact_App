@@ -79,7 +79,9 @@ class EditController extends Controller
         $data->name = $request->name;
         $data->number = $request->number;
         $data->save();
-        return redirect('/');
+        if($validateData){
+            return redirect('/')->with('success','You have successfully Update Contact');
+        }
     }
 
     /**
