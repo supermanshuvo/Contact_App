@@ -25,6 +25,11 @@
                                     {{ Session::get('success') }}
                                 </div>
                                 @endif
+                                @if(Session::get('delete'))
+                                <div class="alert alert-warning">
+                                    {{ Session::get('delete') }}
+                                </div>
+                                @endif
                     </div>
             <table class="table">
                 <thead class="thead-dark">

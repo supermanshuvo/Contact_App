@@ -85,7 +85,7 @@ class IndexController extends Controller
     {
         $delete = Number::find($id);
         $delete->delete();
-        return redirect('/');
+        return redirect('/')->with('delete','You have successfully Delete Contact');
     }
     
     public function destroy()
