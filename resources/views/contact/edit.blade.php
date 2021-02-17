@@ -24,7 +24,7 @@
                     </div>
                     <div class="form-group">
                         <label for="inputEmail">Number :</label>
-                        <input type="number" name="number" id="inputEmail" class="form-control" value="{{$data->number}}" placeholder="Edit Number" autocomplete="off">
+                        <input type="text" name="number" id="inputEmail" class="form-control" value="{{$data->number}}" placeholder="Edit Number" autocomplete="off">
                         @error('number')
                            <span class="text-danger">{{$message}}</span>
                         @enderror
