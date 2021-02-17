@@ -38,7 +38,7 @@ class AddController extends Controller
     {
         $validateData = $request->validate([
             'name' => 'required',
-            'number'=> 'required|min:9|max:16',
+            'number'=> 'required|regex:/(01)[0-9]{9}/|max:16',
         ]);
         $number = new Number;
         $number->name = $request->name;
