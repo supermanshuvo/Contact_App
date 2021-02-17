@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Number extends Model
 {
     use HasFactory;
+    protected $table = "numbers";
+
+    public function contact(){
+        return $this->belongsTo('App\Models\Contact');
+    }
 }
