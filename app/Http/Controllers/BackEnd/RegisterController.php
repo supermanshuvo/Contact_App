@@ -38,7 +38,7 @@ class RegisterController extends Controller
     {
         $validateData = $request->validate([
             'name' => 'required',
-            'email'=> 'required|email|unique:users',
+            'email'=> 'required|email|unique:App\Models\Contact,email',
             'number'=> 'required|regex:/(01)[0-9]{9}/|max:16',
             'password'=> 'required|min:6|max:16',
             'confirm_password'=> 'same:password',

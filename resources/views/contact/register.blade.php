@@ -9,6 +9,16 @@
         <div class="card bg-style">
             <div class="card-body">
                 <!-- START REGISTER FORM -->
+                <!-- Alert Area -->
+                @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+                @endif
                 <form method="POST" action="{{ route('register') }}">
                     @csrf
                     <h1 class="h3 mb-3 font-weight-normal">Please Input your Information</h1>
