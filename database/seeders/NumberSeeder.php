@@ -18,14 +18,17 @@ class NumberSeeder extends Seeder
             [
             'name' => 'Shuvo',
             'number' => '01791623736',
+            'userId' => 1
             ]);
         Number::create([
             'name' => 'Superman',
-            'number' => '01303316865'
+            'number' => '01303316865',
+            'userId' => 2
         ]);
         Number::create([
             'name' => 'Rezaul Karim',
-            'number' => '01713467045'
+            'number' => '01713467045',
+            'userId' => 1
         ]);
     }
 }
