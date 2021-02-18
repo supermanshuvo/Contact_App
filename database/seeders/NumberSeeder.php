@@ -3,9 +3,9 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
+use App\Models\Number;
 
 class NumberSeeder extends Seeder
 {
@@ -16,19 +16,18 @@ class NumberSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('numbers')->insert(
+        Number::create(
             [
             'name' => 'Shuvo',
             'number' => '01791623736',
-            ],
-            [
-                'name' => 'Superman',
-                'number' => '01303316865'
-            ],
-            [
-                'name' => 'Rezaul Karim',
-                'number' => '01713467045'
-            ]
-        );
+            ]);
+        Number::create([
+            'name' => 'Superman',
+            'number' => '01303316865'
+        ]);
+        Number::create([
+            'name' => 'Rezaul Karim',
+            'number' => '01713467045'
+        ]);
     }
 }
