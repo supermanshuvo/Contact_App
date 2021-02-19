@@ -28,7 +28,18 @@ class LoginController extends Controller
         $user = Contact::where('email','=', $request->email)->first();
         if($user){
             if(Hash::check($request->password, $user->password)){
-                $request->session()->put('user',$user->id);
+                /* $data = Contact::where([
+                    ['email','=',$request->email],
+                    ['password','=',Hash::check($request->password, $user->password)]
+                ]); */
+                // $data = $request->session()->put('user',$user);
+                // $data = $request->session()->put('user',$user);
+                // return redirect('/');
+                $userName = $user->name;
+                $userId = $user->id;
+                // return $user['id'] .' '.$user['name'];
+                $request->session()->put('UserName',$userName);
+                $request->session()->put('UserId',$userId);
                 return redirect('/');
             }else{
                 return redirect('login')->with('fail','Invalid Password try again!');    

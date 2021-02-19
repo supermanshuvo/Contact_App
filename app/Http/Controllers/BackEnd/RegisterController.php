@@ -39,16 +39,16 @@ class RegisterController extends Controller
     {
         $validateData = $request->validate([
             'name' => 'required',
-            'email'=> 'required|email|unique:App\Models\Contact,email',
+            'email'=> 'required|email|unique:App\Models\Contact,ContactEmail',
             'number'=> 'required|regex:/(01)[0-9]{9}/|max:16',
             'password'=> 'required|min:6|max:16',
             'confirm_password'=> 'same:password',
         ]);
         
         $contact = new Contact;   
-        $contact->name=$request->name;
-        $contact->email=$request->email;
-        $contact->number=$request->number;
+        $contact->ContactName=$request->name;
+        $contact->ContactEmail=$request->email;
+        $contact->ContactNumber=$request->number;
         $contact->password=Hash::make($request->password);
         $query = $contact->save();
         
