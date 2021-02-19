@@ -42,7 +42,7 @@
                         <span class="text-danger">{{$message}}</span>
                         @enderror
                     </div>
-                    <input type="hidden" name="userId" value="1">
+                    <input type="hidden" name="userId" value="2">
                     <div class="form-group">
                         <input type="submit" value="Submit" name="submit" class="btn btn-primary">
                     </div>

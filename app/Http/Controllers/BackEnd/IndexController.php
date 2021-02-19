@@ -14,11 +14,11 @@ class IndexController extends Controller
         if(session()->has('user')){
             $user = Contact::where('id','=', session('user'))->first();
             $Info = [
-                'user'=> $user
+                'user'=> $user,
             ];
         }
-        $data =Number::all();
-        return view('contact.index',['numbers'=>$data],$Info);
+        $data =Number::all()->where('userId','=','1')->first();
+        return view('contact.index',['numbers'=>$data]);
     }
 
     public function delete($id)
