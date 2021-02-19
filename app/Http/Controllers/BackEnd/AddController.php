@@ -43,7 +43,7 @@ class AddController extends Controller
         $number = new Number;
         $number->NumberName = $request->name;
         $number->NumberNumber = $request->number;
-        $number->userId = $request->userId;
+        $number->userId = session('UserId');
         $query = $number->save();
         if($validateData){
             return redirect('add')->with('success','You have successfully Add New Contact');
