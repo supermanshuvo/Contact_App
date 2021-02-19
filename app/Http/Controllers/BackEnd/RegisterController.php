@@ -16,7 +16,11 @@ class RegisterController extends Controller
      */
     public function index()
     {
-        return view('contact.register');
+        if(session()->has('UserName')){
+            return view('contact.register');
+        }else{
+            return view('contact.login');
+        }
     }
 
     /**
