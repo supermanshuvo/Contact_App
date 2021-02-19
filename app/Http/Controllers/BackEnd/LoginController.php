@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use App\Models\Contact;
+use App\Models\Number;
 
 class LoginController extends Controller
 {
@@ -16,7 +17,12 @@ class LoginController extends Controller
      */
     public function index()
     {
-        return view('contact.login');
+        if(session()->has('UserName')){
+            $data =Number::all();
+            return view('contact.index',['numbers'=>$data]);
+        }else{
+            return view('contact.login');
+        }
     }
     
     public function authenticate(Request $request)

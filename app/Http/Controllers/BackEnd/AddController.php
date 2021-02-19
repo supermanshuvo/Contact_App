@@ -14,8 +14,12 @@ class AddController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        return view('contact.add');
+    { 
+        if(session()->has('UserName')){
+            return view('contact.add');
+        }else{
+            return view('contact.login');
+        }
     }
 
     /**
