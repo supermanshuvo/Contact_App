@@ -13,12 +13,12 @@ class IndexController extends Controller
     {
         if(session()->has('user')){
             $user = Contact::where('id','=', session('user'))->first();
-            $data = [
+            $Info = [
                 'user'=> $user
             ];
         }
         $data =Number::all();
-        return view('contact.index',['numbers'=>$data]);
+        return view('contact.index',['numbers'=>$data],$Info);
     }
 
     public function delete($id)
