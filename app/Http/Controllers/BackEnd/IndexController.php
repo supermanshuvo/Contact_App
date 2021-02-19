@@ -19,7 +19,7 @@ class IndexController extends Controller
         // }
         // $data =Number::all()->where('userId','=','1')->first();
         if(session()->has('UserName')){
-            $data =Number::all();
+            $data =Number::where('userId','=',session('UserId'))->get();
             return view('contact.index',['numbers'=>$data]);
         }else{
             return view('contact.login');

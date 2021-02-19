@@ -17,14 +17,14 @@
                     <div class="form-group">
                         <label for="firstName">Name :</label>
                         <input type="text" name="name" id="firstName" class="form-control"
-                            placeholder="Edit Name" value="{{$data->name}}" autocomplete="off">
+                            placeholder="Edit Name" value="{{$data->NumberName}}" autocomplete="off">
                             @error('name')
                                 <span class="text-danger">{{$message}}</span>
                             @enderror
                     </div>
                     <div class="form-group">
                         <label for="inputEmail">Number :</label>
-                        <input type="text" name="number" id="inputEmail" class="form-control" value="{{$data->number}}" placeholder="Edit Number" autocomplete="off">
+                        <input type="text" name="number" id="inputEmail" class="form-control" value="{{$data->NumberNumber}}" placeholder="Edit Number" autocomplete="off">
                         @error('number')
                            <span class="text-danger">{{$message}}</span>
                         @enderror
