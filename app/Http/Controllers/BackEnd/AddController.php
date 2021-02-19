@@ -41,8 +41,8 @@ class AddController extends Controller
             'number'=> 'required|regex:/(01)[0-9]{9}/|max:16',
         ]);
         $number = new Number;
-        $number->name = $request->name;
-        $number->number = $request->number;
+        $number->NumberName = $request->name;
+        $number->NumberNumber = $request->number;
         $number->userId = $request->userId;
         $query = $number->save();
         if($validateData){

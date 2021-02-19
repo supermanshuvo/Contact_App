@@ -17,7 +17,8 @@ class IndexController extends Controller
                 'user'=> $user,
             ];
         }
-        $data =Number::all()->where('userId','=','1')->first();
+        // $data =Number::all()->where('userId','=','1')->first();
+        $data =Number::all();
         return view('contact.index',['numbers'=>$data]);
     }
 
