@@ -25,7 +25,7 @@ class LoginController extends Controller
             'email'=> 'required|email',
             'password'=> 'required|min:6|max:16',
         ]);
-        $user = Contact::where('email','=', $request->email)->first();
+        $user = Contact::where('ContactEmail','=', $request->email)->first();
         if($user){
             if(Hash::check($request->password, $user->password)){
                 /* $data = Contact::where([
@@ -35,7 +35,7 @@ class LoginController extends Controller
                 // $data = $request->session()->put('user',$user);
                 // $data = $request->session()->put('user',$user);
                 // return redirect('/');
-                $userName = $user->name;
+                $userName = $user->ContactName;
                 $userId = $user->id;
                 // return $user['id'] .' '.$user['name'];
                 $request->session()->put('UserName',$userName);
