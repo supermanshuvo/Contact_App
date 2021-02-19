@@ -18,8 +18,12 @@ class IndexController extends Controller
         //     ];
         // }
         // $data =Number::all()->where('userId','=','1')->first();
-        $data =Number::all();
-        return view('contact.index',['numbers'=>$data]);
+        if(session()->has('UserName')){
+            $data =Number::all();
+            return view('contact.index',['numbers'=>$data]);
+        }else{
+            return view('contact.login');
+        }
     }
 
     public function delete($id)
