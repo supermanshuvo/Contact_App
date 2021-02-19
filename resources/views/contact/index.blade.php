@@ -49,7 +49,7 @@
                         <td>{{ $number['NumberNumber'] }}</td>
                         <td><a href="edit/{{$number->id}}"><i class="fa fa-edit"
                                     style="font-size:24px;color:blue"></i></a> <a href="delete/{{$number->id}}"><i
-                                    class="fa fa-trash-o" style="font-size:24px;color:red"></i></a></td>
+                                    class="fa fa-trash-o" onclick="confirm('Are you sure! You want to delete number!');" style="font-size:24px;color:red"></i></a></td>
                     </tr>
                     @endforeach
                 </tbody>

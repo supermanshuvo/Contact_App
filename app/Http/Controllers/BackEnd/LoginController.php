@@ -18,7 +18,7 @@ class LoginController extends Controller
     public function index()
     {
         if(session()->has('UserName')){
-            $data =Number::all();
+            $data =Number::where('userId','=',session('UserId'))->get();
             return view('contact.index',['numbers'=>$data]);
         }else{
             return view('contact.login');
