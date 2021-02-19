@@ -28,7 +28,8 @@ class LoginController extends Controller
         $user = Contact::where('email','=', $request->email)->first();
         if($user){
             if(Hash::check($request->password, $user->password)){
-                
+                $request->session()->put('user',$user->id);
+                return redirect('/');
             }else{
                 return redirect('login')->with('fail','Invalid Password try again!');    
             }
