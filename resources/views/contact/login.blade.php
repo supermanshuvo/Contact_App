@@ -24,13 +24,18 @@
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                         <form>
                             @csrf
+                            <!-- Alert Area -->
                             <div class="resutls">
                                 @if(Session::get('success'))
-                                <div class="alert alert-success">
+                                <div class="alert alert-success alert-dismissible fade show" role="alert">
                                     {{ Session::get('success') }}
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
                                 </div>
                                 @endif
                             </div>
+                            <!-- End Alert Area -->
                             <h1 class="h3 mb-3 font-weight-normal">Login Now</h1>
                             <div class="form-group">
                                 <label for="inputEmail">Email address</label>

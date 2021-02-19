@@ -14,28 +14,33 @@
                 <!-- START EDIT FORM -->
                 <form method="POST" action="{{ route('add') }}">
                     @csrf
+                    <!-- Alert Area -->
                     <div class="resutls">
-                                @if(Session::get('success'))
-                                <div class="alert alert-success">
-                                    {{ Session::get('success') }}
-                                </div>
-                                @endif
+                        @if(Session::get('success'))
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            {{ Session::get('success') }}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        @endif
                     </div>
+                    <!-- End Alert Area -->
                     <div class="form-group">
                         <label for="firstName">Name :</label>
-                        <input type="text" name="name" id="firstName" class="form-control" value="{{ old('name') }}" placeholder="Add Name"
-                            autocomplete="off">
-                            @error('name')
-                                <span class="text-danger">{{$message}}</span>
-                            @enderror
+                        <input type="text" name="name" id="firstName" class="form-control" value="{{ old('name') }}"
+                            placeholder="Add Name" autocomplete="off">
+                        @error('name')
+                        <span class="text-danger">{{$message}}</span>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label for="inputEmail">Number :</label>
-                        <input type="text" name="number" id="inputEmail" class="form-control" value="{{ old('number') }}" placeholder="Add Number"
-                            autocomplete="off">
-                            @error('number')
-                                <span class="text-danger">{{$message}}</span>
-                            @enderror
+                        <input type="text" name="number" id="inputEmail" class="form-control"
+                            value="{{ old('number') }}" placeholder="Add Number" autocomplete="off">
+                        @error('number')
+                        <span class="text-danger">{{$message}}</span>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <input type="submit" value="Submit" name="submit" class="btn btn-primary">

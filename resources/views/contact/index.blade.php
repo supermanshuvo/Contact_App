@@ -4,9 +4,9 @@
 @section('content')
 <!-- START CONTAINER -->
 <div class="container">
-<!-- START Header Area -->
+    <!-- START Header Area -->
     <h1 class="text-center heading-style">Welcome To The Contact App</h1>
-<!-- END Header Area -->
+    <!-- END Header Area -->
     <div class="row mt-5">
         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
             <div class="user">
@@ -17,20 +17,20 @@
                 <a href="{{ route('contact_logout') }}"><input type="button" value="Logout" class="btn btn-warning"></a>
             </div>
         </div>
-        <!-- START TABLE -->       
+        <!-- START TABLE -->
         <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 ml-5">
-        <div class="resutls">
-                                @if(Session::get('success'))
-                                <div class="alert alert-success">
-                                    {{ Session::get('success') }}
-                                </div>
-                                @endif
-                                @if(Session::get('delete'))
-                                <div class="alert alert-warning">
-                                    {{ Session::get('delete') }}
-                                </div>
-                                @endif
-                    </div>
+            <div class="resutls">
+                @if(Session::get('success'))
+                <div class="alert alert-success">
+                    {{ Session::get('success') }}
+                </div>
+                @endif
+                @if(Session::get('delete'))
+                <div class="alert alert-warning">
+                    {{ Session::get('delete') }}
+                </div>
+                @endif
+            </div>
             <table class="table">
                 <thead class="thead-dark">
                     <tr>
@@ -46,7 +46,9 @@
                         <th scope="row">{{ $loop->iteration }}</th>
                         <td>{{ $number['name'] }}</td>
                         <td>{{ $number['number'] }}</td>
-                        <td><a href="edit/{{$number->id}}"><i class="fa fa-edit" style="font-size:24px;color:blue"></i></a> <a href="delete/{{$number->id}}"><i class="fa fa-trash-o" style="font-size:24px;color:red"></i></a></td>
+                        <td><a href="edit/{{$number->id}}"><i class="fa fa-edit"
+                                    style="font-size:24px;color:blue"></i></a> <a href="delete/{{$number->id}}"><i
+                                    class="fa fa-trash-o" style="font-size:24px;color:red"></i></a></td>
                     </tr>
                     @endforeach
                 </tbody>
