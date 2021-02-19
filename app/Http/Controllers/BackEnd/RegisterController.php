@@ -4,6 +4,7 @@ namespace App\Http\Controllers\BackEnd;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use App\Models\Contact;
 
 class RegisterController extends Controller
@@ -48,7 +49,7 @@ class RegisterController extends Controller
         $contact->name=$request->name;
         $contact->email=$request->email;
         $contact->number=$request->number;
-        $contact->password=$request->password;
+        $contact->password=Hash::make($request->password);
         $query = $contact->save();
         
         if($validateData){

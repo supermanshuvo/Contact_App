@@ -22,8 +22,6 @@
 
                     <!-- Start Login Form -->
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                        <form>
-                            @csrf
                             <!-- Alert Area -->
                             <div class="resutls">
                                 @if(Session::get('success'))
@@ -36,11 +34,13 @@
                                 @endif
                             </div>
                             <!-- End Alert Area -->
+                        <form action="{{ route('auth.check') }}" method="POST">
+                            @csrf
                             <h1 class="h3 mb-3 font-weight-normal">Login Now</h1>
                             <div class="form-group">
                                 <label for="inputEmail">Email address</label>
                                 <input type="email" name="email" value="{{ old('email') }}" id="inputEmail"
-                                    class="form-control" placeholder="Email address" required autofocus>
+                                    class="form-control" placeholder="Email address"  autofocus>
                                 @error('email')
                                 <span class="text-danger">{{$message}}</span>
                                 @enderror
@@ -48,7 +48,7 @@
                             <div class="form-group">
                                 <label for="inputPassword">Password</label>
                                 <input type="password" name="password" value="{{ old('password') }}" id="inputPassword"
-                                    class="form-control" placeholder="Password" required>
+                                    class="form-control" placeholder="Password" >
                                 @error('password')
                                 <span class="text-danger">{{$message}}</span>
                                 @enderror
