@@ -44,8 +44,8 @@
                     @foreach($numbers as $number)
                     <tr>
                         <th scope="row">{{ $loop->iteration }}</th>
-                        <td>{{ $number['name'] }}</td>
-                        <td>{{ $number['number'] }}</td>
+                        <td>{{ $number['NumberName'] }}</td>
+                        <td>{{ $number['NumberNumber'] }}</td>
                         <td><a href="edit/{{$number->id}}"><i class="fa fa-edit"
                                     style="font-size:24px;color:blue"></i></a> <a href="delete/{{$number->id}}"><i
                                     class="fa fa-trash-o" style="font-size:24px;color:red"></i></a></td>
