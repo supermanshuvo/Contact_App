@@ -50,7 +50,7 @@
                     </div>
                     <div class="form-group">
                         <label for="inputPassword">Password :</label>
-                        <input type="password" name="password" value="{{ old('password') }}" id="inputPassword"
+                        <input type="password" name="password" id="inputPassword"
                             class="form-control" placeholder="Password">
                         @error('password')
                         <span class="text-danger">{{$message}}</span>
@@ -58,8 +58,7 @@
                     </div>
                     <div class="form-group">
                         <label for="inputPassword">Confirm Password :</label>
-                        <input type="password" name="confirm_password" value="{{ old('confirm_password') }}"
-                            id="inputPassword" class="form-control" placeholder="Confirm Password">
+                        <input type="password" name="confirm_password" id="inputPassword" class="form-control" placeholder="Confirm Password">
                         @error('confirm_password')
                         <span class="text-danger">{{$message}}</span>
                         @enderror

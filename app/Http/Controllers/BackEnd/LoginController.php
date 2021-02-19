@@ -18,5 +18,12 @@ class LoginController extends Controller
     {
         return view('contact.login');
     }
-
+    
+    public function authenticate(Request $request)
+    {
+        $validateData = $request->validate([
+            'email'=> 'required|email',
+            'password'=> 'required|min:6|max:16',
+        ]);
+    }
 }
