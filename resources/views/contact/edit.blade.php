@@ -8,6 +8,18 @@
     <!-- START CARD -->
         <div class="card bg-style">
             <div class="card-body">
+            <!-- Alert Area -->
+            @if ($errors->any())
+                @foreach ($errors->all() as $error)       
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                     {{ $error }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                @endforeach
+                @endif
+                <!-- End Alert Area -->
             <!-- START Edit FORM -->
             <h1 class="h3 mb-3 font-weight-normal">Edit Contact</h1>
             <a href="{{ route('contact_index') }}" class="btn btn-primary">Go Back</a>
