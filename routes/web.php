@@ -27,7 +27,6 @@ Route::get('/add', [AddController::class,'index'])->name('contact_add');
 Route::get('/logout', [IndexController::class,'destroy'])->name('contact_logout');
 Route::get('delete/{id}',[IndexController::class,'delete'])->name('delete');
 Route::get('edit/{id}',[EditController::class,'edit']);
-Route::get('/search',[IndexController::class,'search']);
 
 
 // All Post Method in here
@@ -35,3 +34,4 @@ Route::post('/register',[RegisterController::class,'store'])->name('register');
 Route::post('/add', [AddController::class,'store'])->name('add');
 Route::post('/edit',[EditController::class,'update'])->name('edit');
 Route::post('/check',[LoginController::class,'authenticate'])->name('auth.check');
+Route::get('/search',[IndexController::class,'search']);

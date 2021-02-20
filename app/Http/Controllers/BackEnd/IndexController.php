@@ -32,8 +32,8 @@ class IndexController extends Controller
         }
         return redirect('/login');
     }
-    public function search()
+    public function search($search)
     {
-        return view('contact.search');
+        dd($search);
     }
 }
