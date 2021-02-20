@@ -55,13 +55,6 @@
                         <td>{{ $number['NumberNumber'] }}</td>
                         <td><a class="btn btn-primary" href="edit/{{$number->id}}"><i class="fa fa-edit"></i></a>
                             <a class="btn btn-danger" onclick="return del();" href="{{route('delete', $number->id)}}"><i class="fa fa-trash-o"></i></a>
-                            <script>
-                                function del() {
-                                    if (!confirm("Are You Sure to delete this"))
-                                        event.preventDefault();
-                                }
-                            </script>
-
                         </td>
                     </tr>
                     @endforeach
