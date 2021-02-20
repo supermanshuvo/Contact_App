@@ -3,8 +3,6 @@
 namespace App\Http\Controllers\BackEnd;
 
 use App\Http\Controllers\Controller;
-use App\Models\Contact;
-use Illuminate\Http\Request;
 use App\Models\Number;
 
 class IndexController extends Controller
