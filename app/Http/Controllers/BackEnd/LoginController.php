@@ -18,10 +18,9 @@ class LoginController extends Controller
     public function index()
     {
         if(session()->has('UserName')){
-            $data =Number::where('userId','=',session('UserId'))->get();
-            return view('contact.index',['numbers'=>$data]);
+            return redirect('/');
         }else{
-            return view('contact.login');
+            return view('contact.register');
         }
     }
     
