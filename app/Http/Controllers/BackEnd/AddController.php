@@ -19,7 +19,6 @@ class AddController extends Controller
 
     public function store(Request $request)
     {
-        
         $validateData = $request->validate([
             'name' => 'required',
             'number'=> 'required|regex:/([\+])?\d(01)?(\d[0-9])?([-])?/|max:16',
