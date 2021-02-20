@@ -13,7 +13,7 @@ class EditController extends Controller
         if(session()->has('UserName')){
             return redirect('/');
         }else{
-            return view('contact.login');
+            return redirect('/');
         }
     }
     public function edit($id)
@@ -33,26 +33,12 @@ class EditController extends Controller
             'name' => 'required',
             'number'=> 'required|regex:/([\+])?\d(01)?(\d[0-9])?([-])?/|max:16',
         ]);
-        $dataName = $request->input('name');
-        $dataNumber = $request->input('number');
-        // return $dataName.' '.$dataNumber;
         $data = Number::find($request->id);
-        $data->NumberName = $dataName;
-        $data->NumberNumber = $dataNumber;
+        $data->NumberName = $request->name;
+        $data->NumberNumber = $request->number;
         $data->save();
         if($validateData){
             return redirect('/')->with('success','You have successfully Update Contact');
         }
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
     }
 }
