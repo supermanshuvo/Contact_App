@@ -18,6 +18,7 @@ class CreateNumbersTable extends Migration
             $table->string('NumberName');
             $table->string('NumberNumber');
             $table->bigInteger('userId')->unsigned();
+            $table->bigInteger('multi')->unsigned();
             $table->timestamps();
             $table->foreign('userId')->references('id')->on('contacts')->onDelete('cascade');
         });
