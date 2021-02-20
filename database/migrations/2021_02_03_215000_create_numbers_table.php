@@ -16,7 +16,7 @@ class CreateNumbersTable extends Migration
         Schema::create('numbers', function (Blueprint $table) {
             $table->id();
             $table->string('NumberName');
-            $table->string('NumberNumber')->unique();
+            $table->string('NumberNumber');
             $table->bigInteger('userId')->unsigned();
             $table->timestamps();
             $table->foreign('userId')->references('id')->on('contacts')->onDelete('cascade');
