@@ -34,4 +34,4 @@ Route::post('/register',[RegisterController::class,'store'])->name('register');
 Route::post('/add', [AddController::class,'store'])->name('add');
 Route::post('/edit',[EditController::class,'update'])->name('edit');
 Route::post('/check',[LoginController::class,'authenticate'])->name('auth.check');
-Route::get('/search',[IndexController::class,'search']);
+Route::post('/search',[IndexController::class,'search']);

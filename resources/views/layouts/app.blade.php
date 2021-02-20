@@ -30,7 +30,8 @@
             <a class="nav-link" href="{{  route('contact_add') }}">Add New Contact<span class="sr-only">(current)</span></a>
           </li>
         </ul>
-        <form class="form-inline mt-2 mt-md-0" method="GET" action="{{ url('/search') }}">
+        <form class="form-inline mt-2 mt-md-0" action="{{ url('/search') }}" method="POST">
+        @csrf
           <input class="form-control mr-sm-2" type="text" name="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
         </form>

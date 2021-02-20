@@ -4,6 +4,7 @@ namespace App\Http\Controllers\BackEnd;
 
 use App\Http\Controllers\Controller;
 use App\Models\Number;
+use Illuminate\Http\Request;
 
 class IndexController extends Controller
 {
@@ -32,8 +33,13 @@ class IndexController extends Controller
         }
         return redirect('/login');
     }
-    public function search($search)
+    public function search(Request $request)
     {
-        dd($search);
+        if(session()->has('UserName')){
+            $data =Number::where('userId','=',session('UserId'))->get();
+            return view('contact.index',['numbers'=>$data]);
+        }else{
+            return view('contact.login');
+        }
     }
 }
