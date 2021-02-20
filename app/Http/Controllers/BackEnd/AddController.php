@@ -11,9 +11,9 @@ class AddController extends Controller
     public function index()
     { 
         if(session()->has('UserName')){
-            return view('contact.add');
+            return redirect('/');
         }else{
-            return view('contact.login');
+            return view('contact.register');
         }
     }
 
