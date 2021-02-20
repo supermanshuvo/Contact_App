@@ -33,9 +33,12 @@ class EditController extends Controller
             'name' => 'required',
             'number'=> 'required|regex:/([\+])?\d(01)?(\d[0-9])?([-])?/|max:16',
         ]);
+        $dataName = $request->input('name');
+        $dataNumber = $request->input('number');
+        // return $dataName.' '.$dataNumber;
         $data = Number::find($request->id);
-        $data->NumberName = $request->input('name');
-        $data->NumberNumber = $request->input('number');
+        $data->NumberName = $dataName;
+        $data->NumberNumber = $dataNumber;
         $data->save();
         if($validateData){
             return redirect('/')->with('success','You have successfully Update Contact');
