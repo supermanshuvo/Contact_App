@@ -25,8 +25,8 @@ Route::get('/register', [RegisterController::class,'index'])->name('contact_regi
 Route::get('/edit', [EditController::class,'index'])->name('contact_edit');
 Route::get('/add', [AddController::class,'index'])->name('contact_add');
 Route::get('/logout', [IndexController::class,'destroy'])->name('contact_logout');
-Route::get('delete/{id}',[IndexController::class,'delete']);
-Route::get('edit/{id}',[EditController::class,'edit']);
+Route::get('delete/{id}',[IndexController::class,'delete'])->name('delete');
+Route::get('edit/{id}',[EditController::class,'edit'])->name('edit');
 
 
 // All Post Method in here

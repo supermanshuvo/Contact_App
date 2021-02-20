@@ -53,10 +53,21 @@
                         <th scope="row">{{ $loop->iteration }}</th>
                         <td>{{ $number['NumberName'] }}</td>
                         <td>{{ $number['NumberNumber'] }}</td>
-                        <td><a href="edit/{{$number->id}}"><i class="fa fa-edit"
-                                    style="font-size:24px;color:blue"></i></a> <a href="delete/{{$number->id}}"><i
-                                    class="fa fa-trash-o" onclick="confirm('Are you sure! You want to delete number!');"
-                                    style="font-size:24px;color:red"></i></a></td>
+                        <td><a class="btn btn-primary" onclick="return edit();" href="{{route('edit', $number->id)}}"><i class="fa fa-edit"></i></a>
+                            <a class="btn btn-danger" onclick="return del();" href="{{route('delete', $number->id)}}"><i class="fa fa-trash-o"></i></a>
+                            <script>
+                                function edit(){
+                                    if(!confirm("Are you sure to edit this"))
+                                        event.preventDefault();
+                                    
+                                }
+                                function del() {
+                                    if (!confirm("Are You Sure to delete this"))
+                                        event.preventDefault();
+                                }
+                            </script>
+
+                        </td>
                     </tr>
                     @endforeach
                 </tbody>
