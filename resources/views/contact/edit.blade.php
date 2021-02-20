@@ -9,7 +9,7 @@
         <div class="card bg-style">
             <div class="card-body">
             <!-- Alert Area -->
-            @if ($errors->any())
+                @if ($errors->any())
                 @foreach ($errors->all() as $error)       
                 <div class="alert alert-danger alert-dismissible fade show" role="alert">
                      {{ $error }}
