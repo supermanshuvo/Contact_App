@@ -11,7 +11,7 @@ class EditController extends Controller
     public function index()
     {
         if(session()->has('UserName')){
-            return view('contact.edit');
+            return redirect('/');
         }else{
             return view('contact.login');
         }
@@ -19,7 +19,13 @@ class EditController extends Controller
     public function edit($id)
     {
         $data = Number::find($id);
-        return view('contact.edit',compact('data'));
+        if(session()->has('UserName')){
+            if($data){
+                return view('contact.edit',compact('data'));
+            }
+        }else{
+            return view('contact.login');
+        }        
     }
     public function update(Request $request)
     {
