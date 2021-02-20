@@ -36,8 +36,13 @@ class IndexController extends Controller
     public function search(Request $request)
     {
         if(session()->has('UserName')){
-            $data =Number::where('userId','=',session('UserId'))->get();
-            return view('contact.index',['numbers'=>$data]);
+            $data =Number::where([
+                ['userId','=',session('UserId')],
+                // ['NumberName','=', $request->search],
+                ['NumberNumber','=', $request->search]
+                ])->first();
+            // return view('contact.index',['numbers'=>$data]);
+            dd($data);
         }else{
             return view('contact.login');
         }
