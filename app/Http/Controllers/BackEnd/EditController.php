@@ -25,7 +25,7 @@ class EditController extends Controller
     {
         $validateData = $request->validate([
             'name' => 'required',
-            'number'=> 'required|regex:/(01)[0-9]{9}/|max:16',
+            'number'=> 'required|regex:/([\+])?\d(01)?(\d[0-9])?([-])?/|max:16',
         ]);
         $data = Number::find($request->id);
         $data->NumberName = $request->name;
