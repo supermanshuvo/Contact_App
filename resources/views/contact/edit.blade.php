@@ -13,7 +13,6 @@
             <a href="{{ route('contact_index') }}" class="btn btn-primary">Go Back</a>
                 <form method="POST" action="{{ route('edit') }}">
                     @csrf
-                    <input type="hidden" name="id" value="{{$data->id}}">
                     <div class="form-group">
                         <label for="firstName">Name :</label>
                         <input type="text" name="name" id="firstName" class="form-control"
