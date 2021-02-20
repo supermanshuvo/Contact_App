@@ -20,7 +20,7 @@ class LoginController extends Controller
         if(session()->has('UserName')){
             return redirect('/');
         }else{
-            return view('contact.register');
+            return view('contact.login');
         }
     }
     
