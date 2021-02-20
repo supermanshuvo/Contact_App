@@ -10,11 +10,6 @@ use App\Models\Number;
 
 class LoginController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
         if(session()->has('UserName')){
@@ -33,16 +28,8 @@ class LoginController extends Controller
         $user = Contact::where('ContactEmail','=', $request->email)->first();
         if($user){
             if(Hash::check($request->password, $user->password)){
-                /* $data = Contact::where([
-                    ['email','=',$request->email],
-                    ['password','=',Hash::check($request->password, $user->password)]
-                ]); */
-                // $data = $request->session()->put('user',$user);
-                // $data = $request->session()->put('user',$user);
-                // return redirect('/');
                 $userName = $user->ContactName;
                 $userId = $user->id;
-                // return $user['id'] .' '.$user['name'];
                 $request->session()->put('UserName',$userName);
                 $request->session()->put('UserId',$userId);
                 return redirect('/');
