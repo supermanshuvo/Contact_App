@@ -32,4 +32,8 @@ class IndexController extends Controller
         }
         return redirect('/login');
     }
+    public function search()
+    {
+        return view('contact.search');
+    }
 }
