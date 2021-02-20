@@ -11,10 +11,10 @@ class RegisterController extends Controller
 {
     public function index()
     {
-        if(!(session()->has('UserName'))){
-            return view('contact.register');
-        }else{
+        if(session()->has('UserName')){
             return redirect('/');
+        }else{
+            return view('contact.register');
         }
     }
 
