@@ -42,7 +42,7 @@ class AddController extends Controller
     {
         $validateData = $request->validate([
             'name' => 'required',
-            'number'=> 'required|regex:/(01)[0-9]{9}/|max:16|unique:App\Models\Number,NumberNumber',
+            'number'=> 'required|regex:/([\+])?\d(01)?(\d[0-9])?([-])?/|max:16|unique:App\Models\Number,NumberNumber',
         ]);
         $number = new Number;
         $number->NumberName = $request->name;
