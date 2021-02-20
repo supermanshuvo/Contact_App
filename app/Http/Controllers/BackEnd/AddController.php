@@ -19,37 +19,41 @@ class AddController extends Controller
 
     public function store(Request $request)
     {
+        
+        $validateData = $request->validate([
+            'name' => 'required',
+            'number'=> 'required|regex:/([\+])?\d(01)?(\d[0-9])?([-])?/|max:16|unique:App\Models\Number,NumberNumber',
+        ]);
         // return $request->input();
-        $dataName = $request->input('name');
+        // $dataName = $request->input('name');
         $dataNumber = $request->input('number');
         // return $dataName.' '.$dataNumber;
-        $duplicate = Number::where([])->first();
+        $duplicate = Number::where([
+            ['NumberNumber','=',$dataNumber],
+            ['userId','=',session('UserId')]
+        ])->first();
+        // return $duplicate;
         /* $duplicate =Number::where([
             ['userId','=',session('UserId')],
             []
-        ])->get();
-        if($duplicate){
-            return 'duplicate';
-        }else{
-         return 'not found';   
-        } */
+        ])->get();*/
         // dd($duplicate);
         /* if($duplicate){
             return redirect('add')->with('fail','Number Already add ');
         }else{
             return view('contact.login');
+        }*/
+        if($duplicate){
+            return redirect('add')->with('fail','Number Already add ');
+        }else{
+            $number = new Number;
+            $number->NumberName = $request->name;
+            $number->NumberNumber = $request->number;
+            $number->userId = session('UserId');
+            $query = $number->save();
+            if($validateData){
+                return redirect('add')->with('success','You have successfully Add New Contact');
+            }
         }
-        $validateData = $request->validate([
-            'name' => 'required',
-            'number'=> 'required|regex:/([\+])?\d(01)?(\d[0-9])?([-])?/|max:16|unique:App\Models\Number,NumberNumber',
-        ]);
-        $number = new Number;
-        $number->NumberName = $request->name;
-        $number->NumberNumber = $request->number;
-        $number->userId = session('UserId');
-        $query = $number->save();
-        if($validateData){
-            return redirect('add')->with('success','You have successfully Add New Contact');
-        } */
     }
 }
