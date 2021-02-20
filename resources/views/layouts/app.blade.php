@@ -41,6 +41,7 @@
     @yield('content')
     <!-- START JS FILE LINK -->
     <script src="{{ Asset('js/app.js')}}"></script>
+    <script src="{{ Asset('js/myjs.js')}}"></script>
     <!-- END JS FILE LINK -->
 </body>
 
