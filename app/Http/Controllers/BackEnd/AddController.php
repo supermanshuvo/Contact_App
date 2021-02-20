@@ -19,6 +19,26 @@ class AddController extends Controller
 
     public function store(Request $request)
     {
+        // return $request->input();
+        $dataName = $request->input('name');
+        $dataNumber = $request->input('number');
+        // return $dataName.' '.$dataNumber;
+        $duplicate = Number::where([])->first();
+        /* $duplicate =Number::where([
+            ['userId','=',session('UserId')],
+            []
+        ])->get();
+        if($duplicate){
+            return 'duplicate';
+        }else{
+         return 'not found';   
+        } */
+        // dd($duplicate);
+        /* if($duplicate){
+            return redirect('add')->with('fail','Number Already add ');
+        }else{
+            return view('contact.login');
+        }
         $validateData = $request->validate([
             'name' => 'required',
             'number'=> 'required|regex:/([\+])?\d(01)?(\d[0-9])?([-])?/|max:16|unique:App\Models\Number,NumberNumber',
@@ -30,6 +50,6 @@ class AddController extends Controller
         $query = $number->save();
         if($validateData){
             return redirect('add')->with('success','You have successfully Add New Contact');
-        }
+        } */
     }
 }
