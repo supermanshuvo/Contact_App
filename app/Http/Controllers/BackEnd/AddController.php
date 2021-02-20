@@ -24,25 +24,11 @@ class AddController extends Controller
             'name' => 'required',
             'number'=> 'required|regex:/([\+])?\d(01)?(\d[0-9])?([-])?/|max:16',
         ]);
-        // return $request->input();
-        // $dataName = $request->input('name');
         $dataNumber = $request->input('number');
-        // return $dataName.' '.$dataNumber;
         $duplicate = Number::where([
             ['NumberNumber','=',$dataNumber],
             ['userId','=',session('UserId')]
         ])->first();
-        // return $duplicate;
-        /* $duplicate =Number::where([
-            ['userId','=',session('UserId')],
-            []
-        ])->get();*/
-        // dd($duplicate);
-        /* if($duplicate){
-            return redirect('add')->with('fail','Number Already add ');
-        }else{
-            return view('contact.login');
-        }*/
         if($duplicate){
             return redirect('add')->with('fail','Number Already add ');
         }else{
