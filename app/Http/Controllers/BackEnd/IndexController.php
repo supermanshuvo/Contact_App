@@ -5,6 +5,7 @@ namespace App\Http\Controllers\BackEnd;
 use App\Http\Controllers\Controller;
 use App\Models\Number;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class IndexController extends Controller
 {
@@ -36,15 +37,29 @@ class IndexController extends Controller
     public function search(Request $request)
     {
         if(session()->has('UserName')){
-            $data =Number::where([
-                ['userId','=',session('UserId')],
-                // ['NumberName','=', $request->search],
-                ['NumberNumber','=', $request->search]
-                ])->first();
+            $validateData = $request->validate([
+                'search' => 'required',
+            ]);
+            $data = $request->search;
+            $info = DB::table('numbers')->where('userId','=',session('UserId'))->where('NumberNumber','LIKE','%',$data,'%')->orWhere('NumberName','LIKE','%',$data,'%')->get();
+            return $info;
+            
+            
+            
+            
+            
+            
+            
+            /* 
+            $data =DB::table('numbers')->where('NumberNumber','Like','%', $request->search,'%')->get();
             // return view('contact.index',['numbers'=>$data]);
-            dd($data);
+            if($data){
+                return $data;
+            }else{
+                return "not";
+            } */
         }else{
-            return view('contact.login');
+            return redirect('/');
         }
     }
 }
