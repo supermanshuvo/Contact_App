@@ -6,6 +6,7 @@ use App\Http\Controllers\BackEnd\LoginController;
 use App\Http\Controllers\BackEnd\RegisterController;
 use App\Http\Controllers\BackEnd\EditController;
 use App\Http\Controllers\BackEnd\AddController;
+use App\Http\Controllers\BackEnd\SearchController;
 
 
 /*
@@ -34,4 +35,4 @@ Route::post('/register',[RegisterController::class,'store'])->name('register');
 Route::post('/add', [AddController::class,'store'])->name('add');
 Route::post('/edit',[EditController::class,'update'])->name('edit');
 Route::post('/check',[LoginController::class,'authenticate'])->name('auth.check');
-Route::post('/search',[IndexController::class,'search']);
+Route::post('/search',[SearchController::class,'search']);
