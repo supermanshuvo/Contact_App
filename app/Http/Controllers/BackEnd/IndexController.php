@@ -34,7 +34,7 @@ class IndexController extends Controller
         }
         return redirect('/login');
     }
-    public function search(Request $request)
+    /* public function search(Request $request)
     {
         if(session()->has('UserName')){
             $validateData = $request->validate([
@@ -121,9 +121,9 @@ class IndexController extends Controller
                 return $data;
             }else{
                 return "not";
-            } */
+            } 
         }else{
             return redirect('/');
         }
-    }
+    } */
 }
