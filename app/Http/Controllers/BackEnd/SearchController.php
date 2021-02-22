@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\BackEnd;
 
+use App\Http\Controllers\Controller;
 use App\Models\Number;
 use Illuminate\Http\Request;
 
@@ -15,9 +16,12 @@ class SearchController extends Controller
             ]);
             $userId = session('UserId');
             $search ='%'.$request->search.'%';
+            
+            
+            /* 
             $info = Number::where('userId','=',$userId)
                             ->where('NumberName','LIKE',$search)
-                            ->orWhere('NumberNumber','LIKE',$search)->get();
+                            ->orWhere('NumberNumber','LIKE',$search)->get(); */
             return $info;
         }else{
             return redirect('/');
