@@ -49,7 +49,9 @@ class IndexController extends Controller
                                  $query->where('userId','=',session('UserId'));
                             })
                             ->get(); */
-            $info =DB::table('numbers')->where('userId','=',session('UserId'))->where('NumberNumber','LIKE',$data)->orWhere('NumberName','LIKE',$data)->get();
+            // $info =DB::table('numbers')->where('userId','=',session('UserId'))->where('NumberNumber','LIKE',$data)->orWhere('NumberName','LIKE',$data)->get();
+            // $info =DB::table('numbers')->where('userId','=',session('UserId'))->where('NumberName','LIKE',$data)->orWhere('NumberNumber','LIKE',$data)->get();
+            $info = Number::search();
 /* 
             $info = DB::table('numbers')->where('userId','=',session('UserId'))
                             ->when($data, function ($query, $data) {
