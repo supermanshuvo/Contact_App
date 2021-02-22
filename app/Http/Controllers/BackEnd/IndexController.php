@@ -40,8 +40,19 @@ class IndexController extends Controller
             $validateData = $request->validate([
                 'search' => 'required',
             ]);
-
-            $data = '%'.$request->search.'%';
+            $userId = session('UserId');
+            $search =$request->search;
+            // $search = "%".$request->search."%";
+            $sql = DB::select("SELECT * FROM numbers WHERE userId = $userId");
+            // $final = DB::table('numbers')->where('NumberName','LIKE',$search)
+            //                         ->orWhere('NumberNumber','LIKE',$search)
+            //                         ->union($sql)->get();
+            $final = [];
+            foreach($sql as $num){
+                if($search){}
+            }
+            return $final;
+            // $result = execute($sql);
             // $data = $request->input('search');
 /* 
             $info = DB::table('numbers')->where('NumberNumber','LIKE',$data)->orWhere('NumberName','LIKE',$data)
@@ -50,15 +61,14 @@ class IndexController extends Controller
                             })
                             ->get(); */
             // $info =DB::table('numbers')->where('userId','=',session('UserId'))->where('NumberNumber','LIKE',$data)->orWhere('NumberName','LIKE',$data)->get();
-            // $info =DB::table('numbers')->where('userId','=',session('UserId'))->where('NumberName','LIKE',$data)->orWhere('NumberNumber','LIKE',$data)->get();
-            $info = Number::search();
+            // $info =DB::table('numbers')->where('userId','=',$userId)->where('NumberName','LIKE',$data)->orWhere('NumberNumber','LIKE',$data)->get();
 /* 
             $info = DB::table('numbers')->where('userId','=',session('UserId'))
                             ->when($data, function ($query, $data) {
                                 return $query->where('NumberNumber','LIKE',$data)->orWhere('NumberName','LIKE',$data);
                             })
                             ->get(); */
-            return $info;
+            // return $info;
 
             /* $role = $request->input('role');
 
@@ -96,7 +106,7 @@ class IndexController extends Controller
 
                 /* print_r($test);
                 die(); */
-            return $info;
+            // return $info;
             
             
             
