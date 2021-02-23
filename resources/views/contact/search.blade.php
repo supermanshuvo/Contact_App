@@ -20,25 +20,19 @@
         </div>
         <!-- START TABLE -->
         <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 ml-5">
-        <a href="{{ }}">All Number</a>
-            <div class="resutls">
-                @if(Session::get('success'))
-                <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    {{ Session::get('success') }}
+        <a class="btn btn-primary" href="{{ route('contact_index') }}">All Number</a>
+            <!-- Alert Area -->
+            @if ($errors->any())
+                @foreach ($errors->all() as $error)       
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                     {{ $error }}
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
+                @endforeach
                 @endif
-                @if(Session::get('delete'))
-                <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                    {{ Session::get('delete') }}
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                @endif
-            </div>
+                <!-- End Alert Area -->
             <table class="table">
                 <thead class="thead-dark">
                     <tr>
