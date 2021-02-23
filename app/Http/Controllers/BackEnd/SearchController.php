@@ -23,12 +23,14 @@ class SearchController extends Controller
             $info = Number::where('userId','=',$userId)
                             ->where('NumberName','LIKE',$search)
                             ->orWhere('NumberNumber','LIKE',$search)->get();
-            foreach($info as $value){
+            
+            return view('contact.search',['numbers'=>$info]);
+            /* foreach($info as $value){
                 if($value['userId']==$userId){
                     echo $value['NumberName'].' '.$value['NumberNumber'];
                 }
             }
-            // return $info;
+            // return $info; */
         }else{
             return redirect('/');
         }
