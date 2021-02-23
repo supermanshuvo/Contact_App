@@ -14,17 +14,17 @@ class SearchController extends Controller
             $validateData = $request->validate([
                 'search' => 'required|min:3',
             ]);
-            
-            $userId = session('UserId');
-            $search ='%'.$request->search.'%';
-            
-            
-            
-            $info = Number::where('userId','=',$userId)
-                            ->where('NumberName','LIKE',$search)
-                            ->orWhere('NumberNumber','LIKE',$search)->get();
-            
-            return view('contact.search',['numbers'=>$info]);
+            if($validateData){
+                return redirect('/')->with('unsearch','Sorry Can\'t find! Try again');
+            }else{
+                $userId = session('UserId');
+                $search ='%'.$request->search.'%';
+                $info = Number::where('userId','=',$userId)
+                                ->where('NumberName','LIKE',$search)
+                                ->orWhere('NumberNumber','LIKE',$search)->get();
+                
+                return view('contact.search',['numbers'=>$info]);
+            }
             /* foreach($info as $value){
                 if($value['userId']==$userId){
                     echo $value['NumberName'].' '.$value['NumberNumber'];
