@@ -21,6 +21,14 @@
         <!-- START TABLE -->
         <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 ml-5">
             <div class="resutls">
+                @error('search')
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    {{ $message }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                @enderror
                 @if(Session::get('success'))
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
                     {{ Session::get('success') }}
@@ -54,7 +62,8 @@
                         <td>{{ $number['NumberName'] }}</td>
                         <td>{{ $number['NumberNumber'] }}</td>
                         <td><a class="btn btn-primary" href="edit/{{$number->id}}"><i class="fa fa-edit"></i></a>
-                            <a class="btn btn-danger" onclick="return del();" href="{{route('delete', $number->id)}}"><i class="fa fa-trash-o"></i></a>
+                            <a class="btn btn-danger" onclick="return del();" href="{{route('delete', $number->id)}}"><i
+                                    class="fa fa-trash-o"></i></a>
                         </td>
                     </tr>
                     @endforeach
