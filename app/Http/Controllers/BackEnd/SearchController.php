@@ -12,17 +12,23 @@ class SearchController extends Controller
     {
         if(session()->has('UserName')){
             $validateData = $request->validate([
-                'search' => 'required',
+                'search' => 'required|min:3',
             ]);
+            
             $userId = session('UserId');
             $search ='%'.$request->search.'%';
             
             
-            /* 
+            
             $info = Number::where('userId','=',$userId)
                             ->where('NumberName','LIKE',$search)
-                            ->orWhere('NumberNumber','LIKE',$search)->get(); */
-            return $info;
+                            ->orWhere('NumberNumber','LIKE',$search)->get();
+            foreach($info as $value){
+                if($value['userId']==$userId){
+                    echo $value['NumberName'].' '.$value['NumberNumber'];
+                }
+            }
+            // return $info;
         }else{
             return redirect('/');
         }
