@@ -25,8 +25,8 @@ class AddController extends Controller
         ]);
         $dataNumber = $request->input('number');
         $duplicate = Number::where([
-            ['NumberNumber','=',$dataNumber],
-            ['userId','=',session('UserId')]
+            ['userId','=',session('UserId')],
+            ['NumberNumber','=',$dataNumber]
         ])->first();
         if($duplicate){
             return redirect('add')->with('fail','Number Already add ');
