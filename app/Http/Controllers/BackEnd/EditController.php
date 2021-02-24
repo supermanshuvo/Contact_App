@@ -31,14 +31,23 @@ class EditController extends Controller
     {
         $validateData = $request->validate([
             'name' => 'required',
-            'number'=> 'required|regex:/([\+])?\d(01)?(\d[0-9])?([-])?/|max:16',
+            'number'=> 'required|regex:/\+?(88)?0?1[3456789][0-9]{8}\b/|max:14',
         ]);
-        $data = Number::find($request->id);
-        $data->NumberName = $request->name;
-        $data->NumberNumber = $request->number;
-        $data->save();
-        if($validateData){
-            return redirect('/')->with('success','You have successfully Update Contact');
+        $dataNumber = $request->input('number');
+        $duplicate = Number::where([
+            ['userId','=',session('UserId')],
+            ['NumberNumber','=',$dataNumber]
+        ])->first();
+        if($duplicate){
+            return redirect('add')->with('fail','Number Already add ');
+        }else{
+            $data = Number::find($request->id);
+            $data->NumberName = $request->name;
+            $data->NumberNumber = $request->number;
+            $data->save();
+            if($validateData){
+                return redirect('/')->with('success','You have successfully Update Contact');
+            }
         }
     }
 }
