@@ -21,7 +21,7 @@ class AddController extends Controller
     {
         $validateData = $request->validate([
             'name' => 'required',
-            'number'=> 'required|regex:/([\+])?\d(01)?(\d[0-9])?([-])?/|max:16',
+            'number'=> 'required|regex:/\+?(88)?0?1[3456789][0-9]{8}\b/|max:14',
         ]);
         $dataNumber = $request->input('number');
         $duplicate = Number::where([
