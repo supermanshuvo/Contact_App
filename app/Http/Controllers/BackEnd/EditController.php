@@ -39,7 +39,7 @@ class EditController extends Controller
             ['NumberNumber','=',$dataNumber]
         ])->first();
         if($duplicate){
-            return redirect('add')->with('fail','Number Already add ');
+            return redirect('/')->with('sameNumber','Number Already add ');
         }else{
             $data = Number::find($request->id);
             $data->NumberName = $request->name;
