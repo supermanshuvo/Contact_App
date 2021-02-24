@@ -23,7 +23,7 @@ class RegisterController extends Controller
         $validateData = $request->validate([
             'name' => 'required',
             'email'=> 'required|email|unique:App\Models\Contact,ContactEmail',
-            'number'=> 'required|regex:/([\+])?\d(01)?(\d[0-9])?([-])?/|max:16',
+            'number'=> 'required|regex:/\+?(88)?0?1[3456789][0-9]{8}\b/|max:16',
             'password'=> 'required|min:6|max:16',
             'confirm_password'=> 'same:password',
         ]);
