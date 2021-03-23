@@ -22,26 +22,6 @@
 
                     <!-- Start Login Form -->
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                            <!-- Alert Area -->
-                            <div class="resutls">
-                                @if(Session::get('success'))
-                                <div class="alert alert-success alert-dismissible fade show" role="alert">
-                                    {{ Session::get('success') }}
-                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                @endif
-                                @if(Session::get('fail'))
-                                <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                                    {{ Session::get('fail') }}
-                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                @endif
-                            </div>
-                            <!-- End Alert Area -->
                         <form action="{{ route('auth.check') }}" method="POST">
                             @csrf
                             <h1 class="h3 mb-3 font-weight-normal">Login Now</h1>

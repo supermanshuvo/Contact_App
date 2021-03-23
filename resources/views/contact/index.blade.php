@@ -21,14 +21,6 @@
         <!-- START TABLE -->
         <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 ml-5">
             <div class="resutls">
-                @error('search')
-                <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                    {{ $message }}
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                @enderror
                 @if(Session::get('delete'))
                 <div class="alert alert-warning alert-dismissible fade show" role="alert">
                     {{ Session::get('delete') }}
