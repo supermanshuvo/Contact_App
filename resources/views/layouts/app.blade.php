@@ -62,6 +62,18 @@
         toastr.warning("{!! Session::get('warning')!!}")
       </script>
     @endif
+    @if(Session::get('fail'))
+      <script>
+        toastr.warning("{!! Session::get('fail')!!}")
+      </script>
+    @endif
+    @if($errors->any())
+    @foreach ($errors->all() as $error)
+      <script>
+        toastr.warning("{!! $error !!}")
+      </script>
+    @endforeach
+    @endif
     <!-- END JS FILE LINK -->
 </body>
 
