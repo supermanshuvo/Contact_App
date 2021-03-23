@@ -54,7 +54,7 @@
     @endif
     @if(Session::get('sameNumber'))
       <script>
-        toastr.warning("{!! Session::get('sameNumber')!!}")
+        toastr.info("{!! Session::get('sameNumber')!!}")
       </script>
     @endif
     @if(Session::get('warning'))
@@ -67,10 +67,15 @@
         toastr.warning("{!! Session::get('fail')!!}")
       </script>
     @endif
+    @if(Session::get('delete'))
+      <script>
+        toastr.warning("{!! Session::get('delete')!!}")
+      </script>
+    @endif
     @if($errors->any())
     @foreach ($errors->all() as $error)
       <script>
-        toastr.warning("{!! $error !!}")
+        toastr.error("{!! $error !!}")
       </script>
     @endforeach
     @endif
