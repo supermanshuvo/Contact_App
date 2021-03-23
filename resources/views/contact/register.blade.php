@@ -5,33 +5,51 @@
 <!-- START CONTAINER -->
 <div class="container">
     <div class="row justify-content-center">
-    <!-- START CARD -->
+        <!-- START CARD -->
         <div class="card bg-style">
             <div class="card-body">
-            <!-- START REGISTER FORM -->
-                <form>
+                <!-- START REGISTER FORM -->
+                <form method="POST" action="{{ route('register') }}">
+                    @csrf
                     <h1 class="h3 mb-3 font-weight-normal">Please Input your Information</h1>
                     <div class="form-group">
-                        <label for="firstName">First Name : </label>
-                        <input type="text" name="firstName" id="firstName" class="form-control"
+                        <label for="firstName">Name : </label>
+                        <input type="text" name="name" value="{{ old('name') }}" id="firstName" class="form-control"
                             placeholder="Enter your Name">
+                        @error('name')
+                        <span class="text-danger">{{$message}}</span>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label for="inputEmail">Email address :</label>
-                        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
+                        <input type="text" name="email" value="{{ old('email') }}" id="inputEmail" class="form-control"
+                            placeholder="Email address">
+                        @error('email')
+                        <span class="text-danger">{{$message}}</span>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label for="number">Number :</label>
-                        <input type="number" name="number" id="number" class="form-control" placeholder="Enter Phone Number">
+                        <input type="text" name="number" value="{{ old('number') }}" id="number" class="form-control"
+                            placeholder="Enter Phone Number">
+                        @error('number')
+                        <span class="text-danger">{{$message}}</span>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label for="inputPassword">Password :</label>
-                        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                        <input type="password" name="password" id="inputPassword"
+                            class="form-control" placeholder="Password">
+                        @error('password')
+                        <span class="text-danger">{{$message}}</span>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <label for="inputPassword">Confirm Password :</label>
-                        <input type="password" id="inputPassword" class="form-control" placeholder="Confirm Password"
-                            required>
+                        <input type="password" name="confirm_password" id="inputPassword" class="form-control" placeholder="Confirm Password">
+                        @error('confirm_password')
+                        <span class="text-danger">{{$message}}</span>
+                        @enderror
                     </div>
                     <div class="form-group">
                         <input type="submit" value="Submit" name="submit" class="btn btn-primary">

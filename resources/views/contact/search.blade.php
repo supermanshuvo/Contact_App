@@ -20,6 +20,7 @@
         </div>
         <!-- START TABLE -->
         <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 ml-5">
+        <a class="btn btn-primary" href="{{ route('contact_index') }}">All Number</a>
             <table class="table">
                 <thead class="thead-dark">
                     <tr>
@@ -32,13 +33,14 @@
                 <tbody>
                     @foreach($numbers as $number)
                     <tr>
+                    @if($number['userId']== session('UserId'))
                         <th scope="row">{{ $loop->iteration }}</th>
                         <td>{{ $number['NumberName'] }}</td>
                         <td>{{ $number['NumberNumber'] }}</td>
                         <td><a class="btn btn-primary" href="edit/{{$number->id}}"><i class="fa fa-edit"></i></a>
-                            <a class="btn btn-danger" onclick="return del();" href="{{route('delete', $number->id)}}"><i
-                                    class="fa fa-trash-o"></i></a>
+                            <a class="btn btn-danger" onclick="return del();" href="{{route('delete', $number->id)}}"><i class="fa fa-trash-o"></i></a>
                         </td>
+                    @endif
                     </tr>
                     @endforeach
                 </tbody>

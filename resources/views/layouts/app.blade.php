@@ -9,6 +9,8 @@
     <!-- END TITLE -->
     <!-- START CSS LINK -->
     <link rel="stylesheet" href="{{ Asset('css/app.css')}}">
+    <link rel="stylesheet" href="{{ Asset('css/toastr.css')}}">
+    <link rel="stylesheet" href="{{ Asset('css/toastr.min.css')}}">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- END CSS LINK -->
@@ -30,8 +32,9 @@
             <a class="nav-link" href="{{  route('contact_add') }}">Add New Contact<span class="sr-only">(current)</span></a>
           </li>
         </ul>
-        <form class="form-inline mt-2 mt-md-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+        <form class="form-inline mt-2 mt-md-0" action="{{ url('/search') }}" method="POST">
+        @csrf
+          <input class="form-control mr-sm-2" type="text" name="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
         </form>
       </div>
@@ -41,6 +44,43 @@
     @yield('content')
     <!-- START JS FILE LINK -->
     <script src="{{ Asset('js/app.js')}}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script>
+    <script src="{{ Asset('js/toastr.min.js')}}"></script>
+    <script src="{{ Asset('js/myjs.js')}}"></script>
+    <!-- Alert Function Add here Start -->
+    @if(Session::get('success'))
+      <script>
+        toastr.success("{!! Session::get('success') !!}")
+      </script>
+    @endif
+    @if(Session::get('sameNumber'))
+      <script>
+        toastr.info("{!! Session::get('sameNumber')!!}")
+      </script>
+    @endif
+    @if(Session::get('warning'))
+      <script>
+        toastr.warning("{!! Session::get('warning')!!}")
+      </script>
+    @endif
+    @if(Session::get('fail'))
+      <script>
+        toastr.warning("{!! Session::get('fail')!!}")
+      </script>
+    @endif
+    @if(Session::get('delete'))
+      <script>
+        toastr.warning("{!! Session::get('delete')!!}")
+      </script>
+    @endif
+    @if($errors->any())
+    @foreach ($errors->all() as $error)
+      <script>
+        toastr.error("{!! $error !!}")
+      </script>
+    @endforeach
+    @endif
+    <!-- Alert Function Add here End -->
     <!-- END JS FILE LINK -->
 </body>
 
