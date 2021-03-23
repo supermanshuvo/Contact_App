@@ -47,6 +47,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script>
     <script src="{{ Asset('js/toastr.min.js')}}"></script>
     <script src="{{ Asset('js/myjs.js')}}"></script>
+    <!-- Alert Function Add here Start -->
     @if(Session::get('success'))
       <script>
         toastr.success("{!! Session::get('success') !!}")
@@ -79,6 +80,7 @@
       </script>
     @endforeach
     @endif
+    <!-- Alert Function Add here End -->
     <!-- END JS FILE LINK -->
 </body>
 
