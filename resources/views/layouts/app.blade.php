@@ -47,6 +47,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script>
     <script src="{{ Asset('js/toastr.min.js')}}"></script>
     <script src="{{ Asset('js/myjs.js')}}"></script>
+    @if(Session::get('success'))
+      <script>
+        toastr.success("{!! Session::get('success') !!}")
+      </script>
+    @endif
+    @if(Session::get('sameNumber'))
+      <script>
+        toastr.warning("{!! Session::get('sameNumber')!!}")
+      </script>
+    @endif
+    @if(Session::get('warning'))
+      <script>
+        toastr.warning("{!! Session::get('warning')!!}")
+      </script>
+    @endif
     <!-- END JS FILE LINK -->
 </body>
 

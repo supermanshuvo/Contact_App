@@ -14,26 +14,6 @@
                 <!-- START EDIT FORM -->
                 <form method="POST" action="{{ route('add') }}">
                     @csrf
-                    <!-- Alert Area -->
-                    <div class="resutls">
-                        @if(Session::get('success'))
-                        <div class="alert alert-success alert-dismissible fade show" role="alert">
-                            {{ Session::get('success') }}
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        @endif
-                        @if(Session::get('fail'))
-                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
-                            {{ Session::get('fail') }}
-                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        @endif
-                    </div>
-                    <!-- End Alert Area -->
                     <div class="form-group">
                         <label for="firstName">Name :</label>
                         <input type="text" name="name" id="firstName" class="form-control" value="{{ old('name') }}"

@@ -29,7 +29,7 @@ class AddController extends Controller
             ['NumberNumber','=',$dataNumber]
         ])->first();
         if($duplicate){
-            return redirect('add')->with('fail','Number Already add ');
+            return redirect('add')->with('warning','Number Already add ');
         }else{
             $number = new Number;
             $number->NumberName = $request->name;
