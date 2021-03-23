@@ -9,6 +9,8 @@
     <!-- END TITLE -->
     <!-- START CSS LINK -->
     <link rel="stylesheet" href="{{ Asset('css/app.css')}}">
+    <link rel="stylesheet" href="{{ Asset('css/toastr.css')}}">
+    <link rel="stylesheet" href="{{ Asset('css/toastr.min.css')}}">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- END CSS LINK -->
@@ -43,6 +45,7 @@
     <!-- START JS FILE LINK -->
     <script src="{{ Asset('js/app.js')}}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script>
+    <script src="{{ Asset('js/toastr.min.js')}}"></script>
     <script src="{{ Asset('js/myjs.js')}}"></script>
     <!-- END JS FILE LINK -->
 </body>
