@@ -12,7 +12,6 @@
             <div class="user">
                 <img src="img/usericon.png" class="img-fluid img-thumbnail mb-5" alt="There Is an User Icon">
                 <h3>User Name : {{ session('UserName') }}</h3>
-                <h4>User ID : {{ session('UserId') }}</h4>
             </div>
             <div class="logout mb-20">
                 <a href="{{ route('contact_logout') }}"><input type="button" value="Logout" class="btn btn-warning"></a>
