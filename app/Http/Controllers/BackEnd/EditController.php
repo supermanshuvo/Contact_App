@@ -40,8 +40,14 @@ class EditController extends Controller
             ['NumberName','=',$dataName],
             ['NumberNumber','=',$dataNumber]
         ])->first();
+        $duplicateNumber = Number::where([
+            ['userId','=',session('UserId')],
+            ['NumberNumber','=',$dataNumber]
+        ])->first();
         if($duplicate){
-            return redirect('/')->with('sameNumber','Contact Already add!');
+            return redirect('/')->wih('sameNumber','Contact Already add!');
+        }elseif($duplicateNumber){
+            return redirect('/')->wih('sameNumber','Number Already add!');
         }else{
             $data = Number::find($request->id);
             $data->NumberName = $request->name;
