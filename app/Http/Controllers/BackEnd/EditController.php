@@ -45,9 +45,9 @@ class EditController extends Controller
             ['NumberNumber','=',$dataNumber]
         ])->first();
         if($duplicate){
-            return redirect('/')->wih('sameNumber','Contact Already add!');
+            return redirect('/')->with('sameNumber','Contact Already add!');
         }elseif($duplicateNumber){
-            return redirect('/')->wih('sameNumber','Number Already add!');
+            return redirect('/')->with('sameNumber','Number Already add!');
         }else{
             $data = Number::find($request->id);
             $data->NumberName = $request->name;
