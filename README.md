@@ -1,6 +1,6 @@
 # Contact_App
 
-##Windows users:
+## Windows users:
 - Download wamp: http://www.wampserver.com/en/
 - Download and extract cmder mini: https://github.com/cmderdev/cmder/releases/download/v1.1.4.1/cmder_mini.zip
 - Update windows environment variable path to point to your php install folder (inside wamp installation dir) (here is how you can do this http://stackoverflow.com/questions/17727436/how-to-properly-set-php-environment-variable-to-run-commands-in-git-bash)
