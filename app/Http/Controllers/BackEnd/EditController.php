@@ -33,13 +33,27 @@ class EditController extends Controller
             'name' => 'required',
             'number'=> 'required|regex:/\+?(88)?0?1[3456789][0-9]{8}\b/|max:14',
         ]);
+        $dataName = $request->input('name');
         $dataNumber = $request->input('number');
         $duplicate = Number::where([
+            ['userId','=',session('UserId')],
+            ['NumberName','=',$dataName],
+            ['NumberNumber','=',$dataNumber]
+        ])->first();
+        $duplicateNumber = Number::where([
             ['userId','=',session('UserId')],
             ['NumberNumber','=',$dataNumber]
         ])->first();
         if($duplicate){
-            return redirect('/')->with('sameNumber','Number Already add ');
+            return redirect('/')->with('sameNumber','Already Added This Contact!');
+        }
+        if($duplicateNumber){
+            $data = Number::find($request->id);
+            $data->NumberName = $request->name;
+            $data->save();
+            if($validateData){
+                return redirect('/')->with('sameNumber','Number Already add!');
+            }
         }else{
             $data = Number::find($request->id);
             $data->NumberName = $request->name;
